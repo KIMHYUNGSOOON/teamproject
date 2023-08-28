@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+.wrapper{
+    width: 400px;
+    height: 450px;
+    display: inline-table;
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.30);
+    position: relative;
+    top: 300px;
+    left: 100px;
+}
+.wrapper header{
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
+    position: relative;
+}
+
+header .icons span:hover{
+    background: #f4ff81;
+}
+.material-symbols-left {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top:25px;
+    left: 100px;
+    display: inline-flex;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+}
+
+/* material-symbols-right 클래스에 이미지를 배경으로 추가합니다. */
+.material-symbols-right {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top:25px;
+    right: 100px; /* 원하는 위치로 조절 */
+    display: inline-flex;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+}
+
+header .current-date{
+    font-size: 1.45rem;
+    font-weight: 500;
+    text-align: center; /* 가운데 정렬 추가 */
+    width: 100%; /* 부모 요소 가로 폭에 맞게 설정 */
+}
+
+.calendar{
+    position: relative;
+
+}
+.calendar ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+}
+.calendar .days{
+    margin-bottom: 20px;
+}
+.calendar li{
+    color: #333;
+    width: calc(100% / 7);
+    font-size: 1.07rem;
+}
+.calendar .weeks li{
+    font-weight: 500;
+    cursor: default;
+}
+.calendar .days li{
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+}
+.days li.inactive{
+    color: #aaa;
+}
+
+.days li::before{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.days li:hover::before{
+    background: #f4ff81;
+}
