@@ -1,0 +1,177 @@
+
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:active, a:hover {
+    text-decoration: underline;
+    color: #F28011;
+}
+.container {
+
+}
+.logo {
+    width: 300px;
+    position: absolute;
+    top: 50px;
+    left: 5%;
+    z-index: 3;
+}
+
+.colored-box {
+    width: 1720px;
+    height: 800px;
+    background-color: #dcedc8;
+    position: relative;
+    z-index: 1;
+    margin: 150px auto 0;
+}
+
+.back-box {
+    width: 1000px;
+    height: 700px;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 2;
+    border-radius: 30px;
+    top: 60px;
+    right: 50px;
+    margin-right: 50px;
+
+
+}
+
+.search-button {
+    width: 230px;
+    height: 70px;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 3;
+    background-color: #fdd835;
+    border: none;
+    cursor: pointer;
+    left: 180px;
+    top: 90px;
+    font-weight: bold;
+}
+.check-button {
+    width: 230px;
+    height: 70px;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 3;
+    background-color: #fdd835;
+    border: none;
+    cursor: pointer;
+    left: 180px;
+    top: 190px;
+    font-weight: bold;
+}
+
+.search-button:hover,
+.check-button:hover
+{
+    background-color: #f4ff81;
+}
+
+
+.icon-se,
+.icon-ck {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 3;
+}
+
+.icon-se {
+    top: 110px;
+    left: 340px;
+}
+
+.icon-ck {
+    width: 25px;
+    height: 25px;
+    top: 215px;
+    left: 340px;
+}
+
+.booking-checkbox{
+    width: 500px;
+    height: 550px;
+    background-color: #eceff1;
+    position: relative;
+    z-index: 4;
+    border-radius: 30px;
+    top: 25px;
+    left: 20px;
+    display: inline-block;
+    overflow-y: scroll;
+}
+
+.booking_LoName1,.booking_LoName2,.booking_LoName3,.booking_LoName4,.booking_LoName5{
+    width: 350px;
+    display: inline-block;
+    border: transparent;
+    border-bottom: 3px solid #8bc34a;
+    background-color: #eceff1;
+    outline: none;
+    margin-top: 80px;
+    margin-left: 50px;
+
+
+}
+
+.text-container{
+    position: relative;
+    z-index: 4;
+    width: 500px;
+    height: 650px;
+    display: inline-block;
+    bottom: 500px;
+    left: 550px;
+    margin: 15px;
+
+}
+.booking-name1,.booking-date1, .booking-location1,.booking-field1{
+    width: 80px;
+    height: 35px;
+    display: inline-block;
+    border: none;
+    margin-right: 20px;
+    margin-bottom: 30px;
+
+}
+.booking-name2,.booking-date2, .booking-location2 {
+    width: 300px;
+    display: inline-block;
+    border: none;
+    border-bottom: 3px solid #8bc34a;
+    outline: none;
+    margin-bottom: 70px;
+
+}
+.booking-field1{
+    width: 80px;
+    height: 35px;
+    display: inline-block;
+    border: none;
+    margin-right: 20px;
+    bottom:180px;
+    position: relative;
+}
+
+
+.booking-field2 {
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    border: 3px solid #8bc34a;
+    bottom:50px;
+}
