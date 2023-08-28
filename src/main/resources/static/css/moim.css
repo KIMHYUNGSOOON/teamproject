@@ -1,0 +1,115 @@
+/*달력*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, h1, h2, h3, h4, h5, p, input, button {
+    font-family: 'GmarketSansMedium', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /*height: 100vh;*/
+
+    margin: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    font-family: 'GmarketSansMedium';
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 20px;
+    margin-left: -550px;
+    cursor: pointer;
+}
+
+.buttons {
+    margin-left: -220px;
+    display: flex;
+}
+.banner {
+    width: 780px;
+    height: 350px;
+    margin-left: 0px;
+}
+.banner {
+    border-radius: 20px 20px 0px 0px;
+}
+
+.banners {
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.buttons {
+    margin-left: -380px;
+    cursor: pointer;
+}
+
+.name {
+    text-align: left;
+    line-height: 50px;
+    font-weight: bold;
+    margin-left: 0px;
+}
+
+.price {
+    text-align: right;
+    margin-top: 30px;
+    margin-right: 350px;
+}
+.level{
+    position: relative;
+    left: 650px;
+    top: -20px;
+}
+.nick{
+    position: absolute;
+    left: 680px;
+    top: 450px;
+}
+.item {
+    width: 150px;
+    height: 50px;
+    border: none;
+    text-align: center;
+    line-height: 4;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: #AED581;
+    color: #fff;
+}
+.search-button {
+    margin-left: 700px;
+    margin-top: -30px;
+    cursor: pointer;
+}
+.search-button:hover{
+    opacity: 70%;
+    color: #ffffff;
+}

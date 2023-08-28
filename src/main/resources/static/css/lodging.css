@@ -1,0 +1,303 @@
+ /*달력*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 400px;
+    height: 450px;
+    display: inline-table;
+    background: #fafafa;
+    border-radius: 10px;
+    /*box-shadow: 0 15px 40px rgba(0,0,0,0.30);*/
+    position: fixed;
+    top: 300px;
+    left: 517px;
+    flex-direction: column;
+    z-index: 20;
+    display: none;
+}
+
+.wrapper header {
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
+    position: relative;
+}
+
+header .icons span:hover {
+    background: #f4ff81;
+}
+
+.material-symbols-left {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 25px;
+    left: 100px;
+    display: inline-flex;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+}
+
+/* material-symbols-right 클래스에 이미지를 배경으로 추가합니다. */
+.material-symbols-right {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 25px;
+    right: 100px; /* 원하는 위치로 조절 */
+    display: inline-flex;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+}
+
+header .current-date {
+    font-size: 1.45rem;
+    font-weight: 500;
+    text-align: center; /* 가운데 정렬 추가 */
+    width: 100%; /* 부모 요소 가로 폭에 맞게 설정 */
+    position: relative;
+}
+
+.wrapper .calendar {
+    position: relative;
+    margin-top: 30px;
+    margin-left: 10px;
+    /*top: 700px;*/
+    /*right: 220px;*/
+}
+
+.wrapper .calendar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+}
+
+.wrapper .calendar .days {
+    margin-bottom: 20px;
+}
+
+.wrapper .calendar li {
+    color: #333;
+    width: calc(100% / 7);
+    font-size: 1.07rem;
+}
+
+.wrapper .calendar .weeks li {
+    font-weight: 500;
+    cursor: default;
+}
+
+.wrapper .calendar .days li {
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+}
+
+.wrapper .calendar .days li.inactive {
+    color: #aaa;
+}
+
+.wrapper .calendar .days li::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper .calendar .days li:hover::before {
+    background: #f4ff81;
+}
+
+
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, h1, h2, h3, h4, h5, p, input, button {
+    font-family: 'GmarketSansMedium', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /*height: 100vh;*/
+
+    margin: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    font-family: 'GmarketSansMedium';
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 20px;
+    margin-left: -550px;
+    cursor: pointer;
+}
+
+.buttons {
+    margin-left: -220px;
+    display: flex;
+}
+
+.search-bar {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    width: 35px;
+    height: 35px;
+    margin-left: -40px;
+    position: relative;
+    top: -8px;
+}
+
+.search-input {
+    margin-left: 10px;
+    width: 740px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: -15px;
+}
+
+.date-input2 {
+    margin-left: 20px;
+    width: 310px;
+    height: 30px;
+    border-radius: 10px;
+    position: relative;
+    top: -11px;
+    left: -15px;
+}
+
+.location-icon {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    left: 37px;
+}
+
+.location-input {
+    margin-left: 10px;
+    width: 310px;
+    height: 30px;
+    border-radius: 10px;
+    position: relative;
+    top: -11px;
+    left: 30px;
+}
+
+.search-button {
+    margin-left: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.search-button:hover{
+    opacity: 70%;
+    color: #ffffff;
+}
+
+.banner {
+    width: 780px;
+    height: 350px;
+    margin-left: 0px;
+}
+
+.calendar-icon {
+    width: 35px;
+    height: 35px;
+    margin-left: -60px;
+    cursor: pointer;
+}
+
+.location-icon {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.banner {
+    border-radius: 20px 20px 0px 0px;
+}
+
+.banners {
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.buttons {
+    margin-left: -380px;
+    cursor: pointer;
+}
+
+.name {
+    text-align: left;
+    line-height: 90px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.price {
+    text-align: right;
+    margin-top: -60px;
+    margin-right: 60px;
+}
+
+.subnav {
+    background-color: #EFEFEF;
+    position: absolute;
+    top: 290px;
+    left: 1030px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    z-index: 10;
+    display: none;
+}
+
+.item {
+    width: 150px;
+    height: 50px;
+    border: none;
+    text-align: center;
+    line-height: 4;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: #AED581;
+    color: #fff;
+}

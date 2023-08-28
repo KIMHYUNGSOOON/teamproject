@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캠프어스</title>
+</head>
+
+<body>
+<div id="wrap">
+    <header id="header" class="clearfix">
+        <h1 class="logo">
+            <a href="main.html"><img src="/static/img/main_img/logo_main_200.png" alt="로고"></a>
+        </h1>
+        <nav class="nav">
+            <ul class="clearfix">
+                <li><a href="#">로그인</a>
+                </li>
+                <li><a href="#">회원가입</a>
+                </li>
+                <li><a href="#">아이디/비밀번호 찾기</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="banner">
+        <ul class="clearfix">
+            <li><img src="/static/img/main_img/banner_01.png" alt="이미지슬라이드01"></li>
+            <li><img src="/static/img/main_img/banner_02.png" alt="이미지슬라이드02"></li>
+            <li><img src="/static/img/main_img/banner_03.png" alt="이미지슬라이드03"></li>
+
+        </ul>
+    </section>
+
+    <section id="category">
+        <ul class="clearfix">
+            <li><a th:href="@{/html/lodging}"><img src="/static/img/main_img/category_01.png" alt="카테고리01">카라반</a></li>
+            <li><a href="lodging.html"><img src="/static/img/main_img/category_02.png" alt="카테고리02">글램핑</a></li>
+            <li><a href="lodging.html"><img src="/static/img/main_img/category_03.png" alt="카테고리03">노지</a></li>
+            <li><a href="lodging.html"><img src="/static/img/main_img/category_04.png" alt="카테고리04">키즈동반</a></li>
+            <li><a href="lodging.html"><img src="/static/img/main_img/category_05.png" alt="카테고리05">애견동반</a></li>
+
+        </ul>
+    </section>
+
+    <section id="contents">
+        <div class="container">
+            <div class="contents clearfix">
+                <div class="notice">
+                    <h3>공지사항</h3>
+                    <ul>
+                        <li class="click"><a href="#">[파크 운영 일부 변경 안내] '유원지, 테마파크의 코로나바이러스감염증-19 감염 확대 예방 가이드라인'의
+                            개정에 따라 2023년 3월 13일부터 파크에서의 마스크 착용 기준을 변경합니다.</a></li>
+                        <li><a href="#"> [파크 티켓 구매 방법에 관한 안내] 입장일이 2023년 4월 1일 이후인 파크 티켓부터 티켓 구매 페이지가 변경됩니다. </a>
+                        </li>
+                        <li><a href="#">[디즈니랜드와 디즈니씨 파크 티켓] 파크 티켓 환불 요청은 더 이상 허용되지 않습니다.</a></li>
+                        <li><a href="#">1983년~2001년에 구매하신 티켓으로 유효기간이 지난 경우에는 이용 또는 변경하실 수 없습니다. </a></li>
+                        <li><a href="#">디즈니랜드 / 디즈니씨 파크 티켓 환불 접수 종료 안내 (2023년 10월 접수 종료)</a></li>
+                    </ul>
+                </div>
+                <div class="friends">
+                    <h3>친구찾기</h3>
+                    <ul>
+                        <li class="click">안녕하세요 자주가는 여행은 아니지만이번엔 정말 좋은 장소를 찾아서 넘 기쁜
+                            마음에 몇자적어봅니다
+                            깨끗하고 맑은공기는 물론이고넘 시원하고  같ㅇㅣ 갈 사람 구함같ㅇㅣ갈 사람 구함같ㅇㅣ 갈 사람 구함같ㅇㅣ 갈 사람 구함같ㅇㅣ •••<a href="#"></a></li>
+                        <li><a href="#">안녕하세요 자주가는 여행은 아니지만이번엔 정말 좋은 장소를 찾아서 넘 기쁜
+                            마음에 몇자적어봅니다
+                            깨끗하고 맑은공기는 물론이고넘 시원하고  같ㅇㅣ 갈 사람 구함같ㅇㅣ갈 사람 구함같ㅇㅣ 갈 사람 구함같ㅇㅣ 갈 사람 구함같ㅇㅣ •••</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 스크립트 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+
+        $("#banner>ul>li").hide();
+        $("#banner>ul>li:first-child").show();
+
+        setInterval(function () {
+            $("#banner>ul>li:first-child").fadeOut(1000).next().fadeIn(1000).end(1000).appendTo("#banner>ul");
+        }, 1500);
+        //
+        // //팝업창
+        // $(".click").click(function () {
+        //     // $("#layer").show();
+        //     $("#layer").fadeIn(500);
+        // });
+        // $(".close").click(function () {
+        //     // $("#layer").hide();
+        //     $("#layer").fadeOut(500);
+        //
+        // });
+
+    </script>
+</div>
+</body>
+
+</html>
