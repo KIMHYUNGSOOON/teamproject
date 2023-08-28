@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" type="text/css" href="/static/css/Join.css">
+</head>
+
+<body>
+<!-- 로고 이미지 -->
+<p style="text-align: center; margin-top: 80px">
+  <img src="../static/img/Logo.png" width="150" height="150" alt="로고이미지">
+</p>
+
+<form name="JoinForm" method="post" action="/Login" role="form"  th:object="${memberDTO}">
+  <div class="input-container-wrapper">
+    <!-- 아이디 입력창 -->
+    <div class="input-container" style="margin-top: 50px">
+      <img src="../static/img/member_img.png" alt="로고이미지"> <input type="text"  th:field="*{userid}" th:for="userid" placeholder=" 아이디를 입력해주세요." >
+      <p th:if="${#fields.hasErrors('userid')}" th:errors="*{userid}" class="fieldError">Incorrect data</p>
+
+    </div>
+
+    <!-- 이름 입력창 -->
+    <div class="input-container" style="margin-top: 50px">
+      <img src="../static/img/name_img.png" alt="로고이미지"> <input type="text" placeholder=" 이름을 입력해주세요." th:field="*{name}" th:for="name">
+    </div>
+
+    <!-- 비밀번호 입력창 -->
+    <div class="input-container" style="margin-top: 50px">
+      <img src="../static/img/pwd_img.png" alt="로고이미지"> <input type="password" placeholder=" 비밀번호를 입력해주세요." th:field="*{pwd}" th:for="pwd" >
+    </div>
+
+    <!-- 비밀번호 확인 입력창 -->
+    <div class="input-container" style="margin-top: 50px">
+      <img src="../static/img/pwd_img.png" alt="로고이미지"> <input type="password" placeholder=" 비밀번호를 입력해주세요." th:field="*{pwd1}" th:for="pwd1">
+    </div>
+
+    <!-- 이메일 입력창 -->
+    <div class="input-container" style="margin-top: 50px">
+      <img src="../static/img/email_img.png" alt="로고이미지"> <input type="text" placeholder=" [선택]이메일을 입력해주세요 [비밀번호 분실시 확인용]"
+                                                                 th:field="*{email}" th:for="email" >
+    </div>
+
+    <!-- 전화번호 입력창 -->
+    <div class="input-container" style="margin-top: 50px">
+      <img src="../static/img/phone_img.png" alt="로고이미지"> <input type="text" placeholder=" 전화번호를 입력해주세요." th:field="*{tel}" th:for="tel" >
+    </div>
+
+    <!-- 성별 선택 -->
+    <div class="radio-container">
+      <img src="../static/img/people_icon.png" alt="로고이미지"
+           style="width: 30px; height: 30px;"> <label th:for="man">남성</label> <input type="radio" id="male" th:field="*{gender}" value="man">
+      <label th:for="woman">여성</label> <input type="radio" th:field="*{gender}" name="gender" value="female">
+    </div>
+
+    <!--회원가입 버튼 -->
+    <p style="text-align: center; margin-top: 50px">
+      <button type="submit" class="login-btn">회원가입</button>
+    </p>
+
+  </div>
+
+</form>
+
+</body>
+</html>
