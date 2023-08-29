@@ -153,9 +153,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
-/*c_button{*/
-/*    cursor: pointer;*/
-/*}*/
+
 .logo {
     margin-top: 20px;
     margin-left: -550px;
@@ -163,9 +161,8 @@ body {
 }
 
 .buttons {
+    margin-left: -220px;
     display: flex;
-    margin-left: -380px;
-
 }
 
 .search-bar {
@@ -258,6 +255,11 @@ body {
     cursor: pointer;
     position: relative;
     z-index: 1;
+}
+
+.buttons {
+    margin-left: -380px;
+    cursor: pointer;
 }
 
 .name {
