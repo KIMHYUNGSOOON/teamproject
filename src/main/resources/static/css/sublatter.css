@@ -1,31 +1,78 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
-    margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 25%;
+    font-family: 'GmarketSansMedium';
 }
+.buttons{
+    margin-top: 30px;
+    box-sizing: border-box;
+    display: flex;
+}
+.nickname2{
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
 
-.content {
-    position: fixed;
 }
-
-.logo, .buttons {
-    position: fixed; /* 로고와 버튼 모두 고정 */
+.date{
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 550px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
-
-.logo {
-    top: 20px;
-    left: 20px;
-    z-index: 2;
-    margin-left: 500px;
+.imgstests{
+    width: 60px;
+    height: 60px;
 }
-
-.buttons {
-    margin-top: 120px;
-    margin-left: -370px;
+.witch{
+    position: relative;
+    top: -40px;
+    right: -20px;
+    border: none;
+    outline: none;
 }
-.c_button {
-    margin: 0;
+.names{
+    width: 200px;
+    height: 30px;
+    left: -163px;
+    top: -10px;
+    position: relative;
+    font-weight: bold;
+    border: none;
+    outline: none;
 }
-.g_bu
+.search-button{
+    position: relative;
+    right: -600px;
+    margin-right: 600px;
+    cursor: pointer;
+}
+.write-button{
+    cursor: pointer;
+}
+.write-button:hover{
+    color: #EFEFEF;
+}
+.search-button:hover{
+    color: #EFEFEF;
+}
+p{
+    margin-bottom: 40px;
+    width: 700px;
+}
+.imgs1{
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
