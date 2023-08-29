@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+.logo{
+    margin-right: -100px;
+    cursor: pointer;
+}
+.buttons{
+    margin-top: 150px;
+    margin-right: -800px;
+
+}
+.search-input{
+    width: 600px;
+    height: 35px;
+    margin-bottom: -200px;
+    border-radius: 10px;
+    position: absolute;
+    top: 200px;
+}
+.search-icon {
+    position: absolute;
+    top: 205px;
+    right: 1270px;
+    width: 30px; /* 원하는 너비로 조정 */
+    height: 30px; /* 원하는 높이로 조정 */
+}
+.search-button{
+    position: absolute;
+    top: 200px;
+    right: 530px;
+    height: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.write-button{
+    position: absolute;
+    top: 200px;
+    right: 440px;
+    cursor: pointer;
+}
+.search-button:hover{
+    color: #EFEFEF;
+}
+.write-button:hover{
+    color: #EFEFEF;
+}
+.level{
+    position: absolute;
+    top: 280px;
+    left: 600px;
+}
+.nickname2{
+    position: absolute;
+    top: 280px;
+    left: 630px;
+    border: none;
+    outline: none;
+}
+.date{
+    position: absolute;
+    left: 1200px;
+    top: 280px;
+    border: none;
+    outline: none;
+}
+p{
+    position: absolute;
+    top: 300px;
+    left:600px;
+    margin-bottom: 40px;
+    text-overflow: ellipsis;
+    max-width: 600px;
+}
+.main{
+    width: 1200px;
+}
+.imgs2 {
+    margin-right: 35px;
+    margin-top: 10px;
+}
+.imgstest{
+    position: absolute;
+    right: -260px;
+    margin-top: 250px;
+    margin-right: 800px;
+}
+.imgstests{
+    width: 60px;
+    height: 60px;
+    margin-top: 790px;
+    margin-left: 595px;
+}
+.witch{
+    position: relative;
+    top: -40px;
+    right: -20px;
+    border: none;
+    outline: none;
+}
+.names{
+    width: 200px;
+    height: 30px;
+    left: -163px;
+    top: -10px;
+    position: relative;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}

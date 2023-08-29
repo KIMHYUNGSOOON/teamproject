@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    position: fixed;
+}
+
+.logo, .buttons {
+    position: fixed; /* 로고와 버튼 모두 고정 */
+}
+
+.logo {
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    margin-left: 500px;
+}
+
+.buttons {
+    margin-top: 120px;
+    margin-left: -370px;
+}
+.c_button {
+    margin: 0;
+}
+.g_bu
