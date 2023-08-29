@@ -1,0 +1,108 @@
+.text {
+    margin-top: 50px;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'GmarketSansMedium';
+}
+.main {
+    margin: 0 auto;
+    width: 60%;
+
+}
+
+.level {
+    margin-right: 100px;
+    margin-top: 30px;
+    position: relative;
+    right: -70px;
+}
+.logo{
+    position: relative;
+    right: -380px;
+}
+.name, .look, .chat, .date {
+    margin-left: 100px;
+}
+.banner{
+
+}
+.sum{
+    margin-bottom: 50px;
+}
+.nick {
+    position: absolute;
+    left: 490px;
+    top: 205px;
+}
+
+.name {
+    position: absolute;
+    top: 205px;
+    right: 1000px;
+}
+
+.date {
+    position: absolute;
+    top: 205px;
+    right: 500px;
+}
+
+.look {
+    position: absolute;
+    right: 1000px;
+}
+
+.chat {
+
+    position: absolute;
+    right: 800px;
+}
+
+h5 {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+.search-input{
+    width: 900px;
+    height: 40px;
+}
+.level{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.nick{
+
+}
+.search-button{
+
+}
+input {
+    border: none;
+    outline: none;
+}
+.sub-banner-container {
+    display: flex;
+}
+
+.subbanner {
+    flex: 1;
+}
+p{
+    margin-bottom: 30px;
+}
+.search-button{
+    cursor: pointer;
+    margin-right: 30px;
+}
+.search-button:hover{
+    color: #EFEFEF;
+}
