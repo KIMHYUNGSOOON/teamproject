@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/bookingmain.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/calender.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/static/js/calender.js" defer></script>
+    <title>예약 메인 페이지</title>
+</head>
+<body>
+
+<div class="container">
+    <a th:href="@{/}"><img class="logo" src="/static/img/logo_sub_300_100.png" alt="로고"></a>
+    <div class="colored-box">
+        <div class="wrapper">
+            <header>
+                <p class="current-date"></p>
+                <div class="icons">
+    <span id="prev" class="material-symbols-left">
+        <img src="/static/img/prev_icon.png" alt="이전 아이콘">
+    </span>
+                    <span id="next" class="material-symbols-right">
+        <img src="/static/img/next_icon.png" alt="다음 아이콘">
+    </span>
+                </div>
+            </header>
+            <div class="calendar">
+                <ul class="weeks">
+                    <li>일</li>
+                    <li>월</li>
+                    <li>화</li>
+                    <li>수</li>
+                    <li>목</li>
+                    <li>금</li>
+                    <li>토</li>
+                </ul>
+                <ul class="days"></ul>
+            </div>
+        </div>
+        <input type="button" class="search-button" value="예약내역" />
+        <img class="icon-se" src="/static/img/search_icon.png" alt="돋보기 아이콘">
+        <input type="button" class="check-button" value="취소이력"/>
+        <img class="icon-ck" src="/static/img/check_icon.png" alt="체크 아이콘">
+        <div class="back-box">
+            <div class="booking-checkbox">
+                <input type="text" class="booking_LoName1" readonly>
+                <input type="text" class="booking_LoName2" readonly>
+                <input type="text" class="booking_LoName3" readonly>
+                <input type="text" class="booking_LoName4" readonly>
+                <input type="text" class="booking_LoName5" readonly>
+
+            </div>
+            <div class="text-container">
+                <p class="booking-name1" >예약자명</p>
+                <input type="text" class="booking-name2" readonly >
+
+                <p class="booking-date1">예약날짜</p>
+                <input type="date" class="booking-date2" readonly>
+
+                <p class="booking-location1">예약장소</p>
+                <input type="text" class="booking-location2" readonly>
+
+                <p class="booking-field1">특이사항</p>
+                <textarea class="booking-field2" readonly></textarea>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
