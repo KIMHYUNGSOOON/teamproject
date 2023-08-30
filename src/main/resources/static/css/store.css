@@ -5,10 +5,8 @@
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Horizontal centering */
-    /*justify-content: center; !* Vertical centering *!*/
-    height: 100vh; /* This makes the container take the full viewport height */
-    /*background: #9CCC65;*/
+    align-items: center;
+    height: 100vh;
 
 }
 .search-icon{
@@ -37,61 +35,76 @@
 }
 .buttonimg {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 4개의 열을 가짐 */
-    grid-gap: -10px; /* 열과 행 간격 조절 */
-    grid-auto-rows: minmax(100px, auto); /* 행의 높이 자동 조절 */
+    grid-template-columns: repeat(5, 1fr);
     cursor: pointer;
 }
 .photo {
-    width: 100%; /* 이미지 크기 조절 */
-    height: auto; /* 이미지 높이 자동으로 조절 */
+    width: 100%;
+    height: auto;
 }
-.tent{
-    position: relative;
+.tent:hover{
+    opacity: 50%;
+}
+.bed:hover{
+    opacity: 50%;
 }
 .table{
     position: relative;
-    left: -9px;
+    left: -26px;
+}
+buttonimg:hover{
+}
+.table:hover{
+    opacity: 50%;
 }
 .taff{
     position: relative;
-    left: -15px;
-    top: -2px;
+    left: -52px;
+}
+.taff:hover{
+    opacity: 50%;
 }
 .chair{
     position: relative;
-    left: -24px;
-    top: -2px;
+    left: -77px;
+}
+.chair:hover{
+    opacity: 50%;
 }
 .fire{
     position: relative;
-    left: -29px;
-    top: -3px;
+    left: -103px;
 }
-.bed{
-    position: relative;
-    top: -8px;
-    left: 1px;
+.fire:hover{
+    opacity: 50%;
 }
 .sunab{
     position: relative;
-    left: -9px;
-    top: -8px;
+    left: -26px;
+}
+.sunab:hover{
+    opacity: 50%;
 }
 .gajeon{
     position: relative;
-    left: -16px;
-    top: -6px;
+    left: -52px;
+}
+.gajeon:hover{
+    opacity: 50%;
 }
 .sut{
     position: relative;
-    top: -11px;
-    left: -23px;
+    left: -77px;
+}
+.sut:hover{
+    opacity: 50%;
 }
 .milkit{
     position: relative;
-    top: -7px;
-    left: -30px;
+    left: -103px;
+}
+.milkit:hover{
+    opacity: 50%;
 }
 .sample{
     float: left;
@@ -141,7 +154,7 @@
     /*opacity: 20%;*/
 }
 .chu{
-    margin-top: 100px;
+    margin-top: 134px;
     margin-right: 1210px;
 }
 .brands{
