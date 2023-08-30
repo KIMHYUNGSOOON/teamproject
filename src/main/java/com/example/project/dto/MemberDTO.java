@@ -19,31 +19,37 @@ public class MemberDTO {
 
     @NotBlank(message = "아이디는 필수 입력 값입니다.")
     private String userid;
+
     @NotEmpty(message = "이름은 필수 입력 값입니다.")
     private String name;
+
     @NotEmpty(message = "비밀번호는 필수 입력 값입니다.")
     @Length(min = 4, max = 16, message = "비밀번호는 4자 이상, 16자 이하로 입력해주세요.")
     private String pwd;
+
     @NotEmpty(message = "비밀번호는 필수 입력 값입니다.")
     @Length(min = 4, max = 16, message = "비밀번호는 4자 이상, 16자 이하로 입력해주세요.")
     private String pwd1;
+
     @NotEmpty(message = "이메일은 필수 입력 값입니다.")
     @Email(message = "이메일 형식으로 입력해주세요.")
     private String email;
+
     @NotEmpty(message = "전화번호는 필수 입력 값입니다.")
     private String tel;
+
     @NotEmpty(message = "성별는 필수 입력 값입니다.")
     private String gender;
 
+    @Builder
+    public MemberDTO(String userid, String name, String pwd, String pwd1, String email, String tel, String gender) {
+        this.userid = userid;
+        this.name = name;
+        this.pwd = pwd;
+        this.pwd1 = pwd1;
+        this.email = email;
+        this.tel = tel;
+        this.gender = gender;
+    }
 
-    /*@Builder
-    public MemberDTO(String userid, String name, String pwd, String pwd1, String email, String tel, String gender){
-        this.userid =userid;
-        this.name =name;
-        this.pwd =pwd;
-        this.pwd1 =pwd1;
-        this.email =email;
-        this.tel =tel;
-        this.gender =gender;
-    }*/
 }
