@@ -18,7 +18,7 @@
             <ul class="clearfix">
                 <li><a th:href="@{/html/Login}">로그인</a>
                 </li>
-                <li><a th:href="@{/html/Member}">회원가입</a>
+                <li><a th:href="@{members/new}">회원가입</a>
                 </li>
                 <li><a th:href="@{/html/Pwd}">아이디/비밀번호 찾기</a>
                 </li>
@@ -54,7 +54,7 @@
                 <div class="notice">
                     <h3>공지사항</h3>
                     <ul>
-                        <li class="click"><a href="#">[파크 운영 일부 변경 안내] '유원지, 테마파크의 코로나바이러스감염증-19 감염 확대 예방 가이드라인'의
+                        <li class="click"><a th:href="@{/html/notice}">[파크 운영 일부 변경 안내] '유원지, 테마파크의 코로나바이러스감염증-19 감염 확대 예방 가이드라인'의
                             개정에 따라 2023년 3월 13일부터 파크에서의 마스크 착용 기준을 변경합니다.</a></li>
                         <li><a href="#"> [파크 티켓 구매 방법에 관한 안내] 입장일이 2023년 4월 1일 이후인 파크 티켓부터 티켓 구매 페이지가 변경됩니다. </a>
                         </li>
