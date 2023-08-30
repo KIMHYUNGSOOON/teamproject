@@ -1,6 +1,10 @@
 body {
     margin: 0;
 }
+a {
+    color: #333333;
+    text-decoration: none;
+}
 
 .center-container {
     display: flex;
