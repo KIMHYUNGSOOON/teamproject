@@ -1,0 +1,208 @@
+.logo{
+    margin-right: 1000px;
+    margin-bottom: 10px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontal centering */
+    /*justify-content: center; !* Vertical centering *!*/
+    height: 100vh; /* This makes the container take the full viewport height */
+    /*background: #9CCC65;*/
+
+}
+.search-icon{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 10px;
+}
+.search-button{
+    width: 80px;
+    height: 40px;
+    font-weight: bolder;
+    background-color: #8BC34A;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+}
+.search-button:hover{
+    color: #EFEFEF;
+}
+.search-input{
+    width: 1200px;
+    height: 40px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+.buttonimg {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 4개의 열을 가짐 */
+    grid-gap: -10px; /* 열과 행 간격 조절 */
+    grid-auto-rows: minmax(100px, auto); /* 행의 높이 자동 조절 */
+    cursor: pointer;
+}
+.photo {
+    width: 100%; /* 이미지 크기 조절 */
+    height: auto; /* 이미지 높이 자동으로 조절 */
+}
+.tent{
+    position: relative;
+}
+.table{
+    position: relative;
+    left: -9px;
+}
+.taff{
+    position: relative;
+    left: -15px;
+    top: -2px;
+}
+.chair{
+    position: relative;
+    left: -24px;
+    top: -2px;
+}
+.fire{
+    position: relative;
+    left: -29px;
+    top: -3px;
+}
+.bed{
+    position: relative;
+    top: -8px;
+    left: 1px;
+}
+.sunab{
+    position: relative;
+    left: -9px;
+    top: -8px;
+}
+.gajeon{
+    position: relative;
+    left: -16px;
+    top: -6px;
+}
+.sut{
+    position: relative;
+    top: -11px;
+    left: -23px;
+}
+.milkit{
+    position: relative;
+    top: -7px;
+    left: -30px;
+}
+.sample{
+    float: left;
+    margin-right: 30px;
+    width: 150px;
+    height: 150px;
+    background: #aaaaaa;
+    border-radius: 10px;
+    cursor: pointer;
+    /*opacity: 20%;*/
+}
+.inputs{
+    position: relative;
+    top: 160px;
+    left: 5px;
+}
+.brand{
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+.edit{
+    border: none;
+    outline: none;
+}
+.price{
+    border: none;
+    outline: none;
+}
+.next{
+    width: 50px;
+    position: relative;
+    top: 50px;
+    cursor: pointer;
+}
+.next:hover{
+    opacity: 20%;
+}
+.samples{
+    float: left;
+    margin-right: 1110px;
+    width: 250px;
+    height: 250px;
+    background: #aaaaaa;
+    border-radius: 10px;
+    cursor: pointer;
+    /*opacity: 20%;*/
+}
+.chu{
+    margin-top: 100px;
+    margin-right: 1210px;
+}
+.brands{
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+.edits{
+    border: none;
+    outline: none;
+}
+.prices{
+    border: none;
+    outline: none;
+}
+.inputss{
+    position: relative;
+    /*top: 240px;*/
+}
+.samples1{
+    float: left;
+    margin-right: 80px;
+    position: relative;
+    top: -230px;
+    right: -600px;
+    width: 250px;
+    height: 230px;
+    background: #aaaaaa;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.samples2{
+
+    float: left;
+    margin-right: 90px;
+    position: relative;
+    top: 78px;
+    right: 70px;
+    width: 250px;
+    height: 230px;
+    background: #aaaaaa;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.samples3{
+    float: left;
+    margin-right: 90px;
+    position: relative;
+    top: -150px;
+    right: -260px;
+    width: 250px;
+    height: 230px;
+    background: #aaaaaa;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.inputss{
+    position: relative;
+    top: 230px;
+}
+.inputse{
+    position: relative;
+    top: 230px;
+}
