@@ -140,6 +140,14 @@
         } else {
             date = new Date(); // pass the current date as date value
         }
+        // if (currMonth < 0) {
+        //     currYear--;
+        //     currMonth = 11;
+        // } else if (currMonth > 11) {
+        //     currYear++;
+        //     currMonth = 0;
+        // }
+
         // renderCalendar 함수 호출
         renderCalendar(); // calling renderCalendar function
     });
@@ -168,6 +176,31 @@
     if (wrapperVisible) {
     $(".wrapper").hide(); // wrapper를 숨김
     wrapperVisible = false; // wrapper가 숨겨짐을 나타내는 플래그 설정
-}
-});
-});
+}});
+        // 캘린더 아이콘의 hover 이벤트 처리
+        $(".calendar-icon").hover(function() {
+            $(".wrapper").show();
+            wrapperVisible = true;
+        });
+
+        // date-input2의 hover 이벤트 처리
+        $(".date-input2").hover(function() {
+            $(".wrapper").show();
+            wrapperVisible = true;
+        });
+
+        // wrapper 영역의 마우스가 벗어났을 때 숨김 처리
+        $(".wrapper").mouseleave(function() {
+            if (wrapperVisible) {
+                $(".wrapper").hide();
+                wrapperVisible = false;
+            }
+        });
+
+        // 달력에서 날짜를 선택했을 때의 동작을 정의합니다.
+        $(".days li").click(function() {
+            var selectedDay = $(this).text();
+            var formattedDate = `${currYear}/${months[currMonth]}/${selectedDay}`;
+            $(".date-input2").val(formattedDate);
+        });
+    });

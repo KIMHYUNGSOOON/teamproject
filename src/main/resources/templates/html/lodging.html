@@ -49,7 +49,7 @@
     <br>
     <div class="search-bar">
         <img class="search-icon" src="/static/img/search_icon.png" alt="돋보기 아이콘">
-        <input class="search-input" type="text" name="member_name" placeholder="캠핑장명을 검색해 보세요">
+        <input class="search-input" type="text" id="campgroundName" placeholder="캠핑장명을 검색해 보세요">
     </div>
     <br>
     <div class="location-bar">
@@ -67,9 +67,9 @@
         <div class="item">제주</div>
     </div>
 </div>
-<button class="search-button" style="width: 80px; height: 30px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px">검 색</button>
-<br>
+<button class="search-button" style="width: 80px; height: 30px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px onclick="searchCampground()">검 색</button>
 
+<br>
 <div class="banners" style="width: 780px; height: 450px; font-size: larger; margin-bottom: 100px; border-radius: 20px">
     <a th:href="@{/html/sublodging}"><img class="banner" src="/static/img/banner02.png" alt="배너 이미지"></a>
     <h4 class="name">여기완전어때 카라반</h4>
