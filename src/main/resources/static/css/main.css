@@ -463,7 +463,7 @@ h6 {
 /* -------------------- 푸터 -------------------- */
 #footer {
     width: 100%;
-    height: 200px;
+    height: 150px;
 }
 /* 푸터로고 */
 .footer .f_logo{
@@ -472,7 +472,9 @@ h6 {
     float: left;
 }
 /* 푸터메뉴 */
-#footer {}
+#footer {
+    width: 1200px;
+}
 
 #footer .f_logo {
     width: 300px;
@@ -485,10 +487,42 @@ h6 {
 #footer .f_logo>a>img {
     filter: grayscale(100%);
 }
-#footer .f_copy {
-    width: 800px;
-    height: 100px;
-    float: left;
+#footer .f_menu {
+    width: 900px;
+    height: 50px;
     text-align: center;
-    padding-top: 50px;
+    float: left;
+    line-height: 50px;
+    display: block;
+    padding-left: 215px;
+}
+
+#footer .f_menu>a {
+    margin-right: 50px;
+    position: relative;
+    text-align: center;
+    float: left;
+    line-height: 80px;
+}
+
+#footer .f_menu>a:first-child::before {
+    width: 0;
+}
+
+#footer .f_menu>a::before {
+    content: "";
+    position: absolute;
+    left: -25px;
+    top: 30px;
+    width: 1px;
+    height: 15px;
+    background-color: #000;
+}
+
+#footer .f_copy {
+    width: 900px;
+    height: 50px;
+    float: left;
+    line-height: 50px;
+    text-align: center;
 }

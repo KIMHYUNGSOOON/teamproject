@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>캠프어스</title>
     <link rel="icon" type="image/png" href="/static/img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
 </head>
 
 <body>
@@ -43,7 +43,6 @@
             <li><a th:href="@{/html/ground}"><img src="/static/img/main_img/category_03.png" alt="카테고리03">노지</a></li>
             <li><a th:href="@{/html/kids}"><img src="/static/img/main_img/category_04.png" alt="카테고리04">키즈동반</a></li>
             <li><a th:href="@{/html/pet}"><img src="/static/img/main_img/category_05.png" alt="카테고리05">애견동반</a></li>
-
         </ul>
     </section>
 
@@ -185,11 +184,17 @@
                         <img src="/static/img/logo_sub_300_100.png" alt="푸터 로고">
                     </a>
                 </div>
+                <div class="f_menu clearfix">
+                    <a th:href="@{/}">회사소개</a>
+                    <a th:href="@{/}">이용약관</a>
+                    <a th:href="@{/}">무단복제</a>
+                    <a th:href="@{/}">정보처리</a>
+                    <a th:href="@{/}">고객지원</a>
+                </div>
                 <div class="f_copy">
                     &copy; 2023 Your Company Name. All rights reserved. | Campus
-
                 </div>
-                    </div>
+            </div>
         </div>
     </footer>
 </div>
