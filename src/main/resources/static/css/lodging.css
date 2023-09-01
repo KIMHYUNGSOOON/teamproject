@@ -299,3 +299,30 @@ body {
     background-color: #AED581;
     color: #fff;
 }
+
+
+
+/*추가분 0901*/
+div.buttons > button{
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px 15px 0 0;
+}
+
+div.buttons > button#button_category1 {
+    background-color : #9E9D24;
+}
+div.buttons > button#button_category2 {
+    background-color : #AED581;
+}div.buttons > button#button_category3 {
+     background-color : #9CCC65;
+ }
+div.buttons > button#button_category4 {
+    background-color : #FDD835;
+}
+div.buttons > button#button_category5 {
+    background-color : #F4FF81;
+}

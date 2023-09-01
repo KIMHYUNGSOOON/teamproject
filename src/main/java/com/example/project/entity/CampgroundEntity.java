@@ -13,7 +13,8 @@ public class CampgroundEntity {
     private Long id;
 
     private String name;
-    private String location;
+    private String fk_categoryId;
+    private String fk_locationId;
     private int price;
 
     // 생성자, getter 및 setter

@@ -213,3 +213,26 @@
             $(".date-input2").val(formattedDate);
         });
     });
+
+
+
+
+    //////////////////////추가분 0901
+ window.onload = function() {
+     const button = document.querySelectorAll("button");
+     [].forEach.call(button,function(e){
+         e.addEventListener('click',function(e){
+             const btn = document.querySelectorAll("div.buttons > button");
+             btn.forEach(item => {
+                 if(e.target != item){
+                     item.style.color = "black";
+                 }else{
+                     e.target.style.color = "white";
+                 }
+             })
+
+         });
+     });
+
+
+ };
