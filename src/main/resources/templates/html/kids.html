@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/static/js/lodging.js" defer></script>
     <meta charset="UTF-8">
-    <title>키즈동반 숙소 예약 페이지</title>
+    <title>카라반 숙소 예약 페이지</title>
     <link rel="icon" type="image/png" href="/static/img/favicon.png">
 </head>
 <body>
@@ -42,16 +42,16 @@
     <a th:href="@{/}"><img class="logo" src="/static/img/logo_sub_300_100.png" alt="로고 이미지"></a>
     <br>
     <div class="buttons">
-        <a th:href="@{/html/lodging}"><button id="c_button" style=" width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #9E9D24; border-radius: 15px 15px 0 0 ">카라반</button></a>
-        <a th:href="@{/html/glamping}"><button id="g_button" style=" width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #AED581; border-radius: 15px 15px 0 0">글램핑</button></a>
+        <a th:href="@{/html/lodging}"><button id="c_button" style=" width: 80px; height: 30px; font-weight: bold;border: none;cursor: pointer; background-color: #9E9D24;color: white; border-radius: 15px 15px 0 0 ">카라반</button></a>
+        <a th:href="@{/html/glamping}"><button id="g_button" style="width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #AED581; border-radius: 15px 15px 0 0">글램핑</button></a>
         <a th:href="@{/html/ground}"><button id="n_button" style="width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #9CCC65; border-radius: 15px 15px 0 0">노지</button></a>
-        <a th:href="@{/html/kids}"> <button id="k_button" style="width: 80px; height: 30px; font-weight: bold;border: none;cursor: pointer; background-color: #FDD835;color: white; border-radius: 15px 15px 0 0">키즈</button></a>
-        <a th:href="@{/html/pet}"> <button id="d_button" style="width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #F4FF81; border-radius: 15px 15px 0 0">애견동반</button></a>
+        <a th:href="@{/html/kids}"><button id="k_button" style="width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #FDD835; border-radius: 15px 15px 0 0">키즈</button></a>
+        <a th:href="@{/html/pet}"><button id="d_button" style="width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #F4FF81; border-radius: 15px 15px 0 0">애견동반</button></a>
     </div>
     <br>
     <div class="search-bar">
         <img class="search-icon" src="/static/img/search_icon.png" alt="돋보기 아이콘">
-        <input class="search-input" type="text" name="member_name" placeholder="캠핑장명을 검색해 보세요">
+        <input class="search-input" type="text" id="campgroundName" placeholder="캠핑장명을 검색해 보세요">
     </div>
     <br>
     <div class="location-bar">
@@ -69,9 +69,9 @@
         <div class="item">제주</div>
     </div>
 </div>
-<button class="search-button" style="width: 80px; height: 30px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px">검 색</button>
-<br>
+<button class="search-button" style="width: 80px; height: 30px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px onclick="searchCampground()">검 색</button>
 
+<br>
 <div class="banners" style="width: 780px; height: 450px; font-size: larger; margin-bottom: 100px; border-radius: 20px">
     <a th:href="@{/html/sublodging}"><img class="banner" src="/static/img/banner02.png" alt="배너 이미지"></a>
     <h4 class="name">여기완전어때 카라반</h4>
@@ -103,7 +103,7 @@
 </div>
 
 </div>
-
+<!-- jQuery와 JavaScript 스크립트 링크 추가 -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="script.js"></script>
 </body>
