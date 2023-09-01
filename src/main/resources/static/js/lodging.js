@@ -31,6 +31,7 @@
 });
 });
 
+// 지역
     $(document).ready(function(){
     var subnavVisible = false;
 
@@ -65,8 +66,16 @@
 }, 300);
 }
 });
+ $(document).ready(function() {
+     $(".item").click(function() {
+         var selectedLocation = $(this).text();
+         $(".location-input").val(selectedLocation);
+         $(".subnav").hide(); // 선택한 후 서브네비게이션 숨김
+     });
+ });
 
-    // HTML 요소 선택
+
+ // 달력 HTML 요소 선택
     const daysTag = document.querySelector(".days"),
     currentDate = document.querySelector(".current-date"),
     prevNextIcon = document.querySelectorAll(".icons span");

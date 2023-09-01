@@ -1,5 +1,12 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     margin: 0;
+    font-family: 'GmarketSansMedium';
 }
 a {
     color: #333333;
@@ -8,8 +15,8 @@ a {
 
 .center-container {
     display: flex;
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center;
+    align-items: center;
 }
 .logo{
     margin-right: -100px;
@@ -19,6 +26,7 @@ a {
     margin-top: 150px;
     margin-right: -800px;
     display: flex;
+    font-family: 'GmarketSansMedium';
 }
 .search-input{
     width: 600px;
@@ -32,8 +40,8 @@ a {
     position: absolute;
     top: 205px;
     right: 1270px;
-    width: 30px; /* 원하는 너비로 조정 */
-    height: 30px; /* 원하는 높이로 조정 */
+    width: 30px;
+    height: 30px;
 }
 .search-button{
     position: absolute;
