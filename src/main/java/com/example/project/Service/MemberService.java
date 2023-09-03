@@ -1,6 +1,5 @@
-package com.example.project.service;
+package com.example.project.Service;
 
-import com.example.project.dto.MemberDTO;
 import com.example.project.entity.MemberEntity;
 import com.example.project.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;

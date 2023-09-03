@@ -38,11 +38,13 @@
 
     <section id="category">
         <ul class="clearfix">
-            <li><a th:href="@{/html/lodging}"><img src="/static/img/main_img/category_01.png" alt="카테고리01">카라반</a></li>
-            <li><a th:href="@{/html/glamping}"><img src="/static/img/main_img/category_02.png" alt="카테고리02">글램핑</a></li>
-            <li><a th:href="@{/html/ground}"><img src="/static/img/main_img/category_03.png" alt="카테고리03">노지</a></li>
-            <li><a th:href="@{/html/kids}"><img src="/static/img/main_img/category_04.png" alt="카테고리04">키즈동반</a></li>
-            <li><a th:href="@{/html/pet}"><img src="/static/img/main_img/category_05.png" alt="카테고리05">애견동반</a></li>
+            <li th:each="category : ${categoryList}">
+                <a th:href="@{/html/lodging(category=${category.id})}"><img th:src="'/static/img/main_img/category_0'+${category.id}+'.png'" th:alt="${'카테고리0'+category.id}" th:text = "${category.name}"></a>
+            </li>
+            <!--<li><a th:href="@{/html/lodging}"><img src="/static/img/main_img/category_02.png" alt="카테고리02">글램핑</a></li>
+            <li><a th:href="@{/html/lodging}"><img src="/static/img/main_img/category_03.png" alt="카테고리03">노지</a></li>
+            <li><a th:href="@{/html/lodging}"><img src="/static/img/main_img/category_04.png" alt="카테고리04">키즈동반</a></li>
+            <li><a th:href="@{/html/lodging}"><img src="/static/img/main_img/category_05.png" alt="카테고리05">애견동반</a></li>-->
         </ul>
     </section>
 

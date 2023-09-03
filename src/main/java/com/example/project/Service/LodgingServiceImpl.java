@@ -1,64 +1,59 @@
 package com.example.project.Service;
 
 
+import com.example.project.dto.CampgroundSearchDTO;
+import com.example.project.entity.CampgroundEntity;
 import com.example.project.entity.CategoryEntity;
 import com.example.project.repository.CampgroundRepository;
 import com.example.project.repository.CategoryRepository;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
-@Service("LodgingService")
-@Transactional
-@RequiredArgsConstructor
-public class LodgingServiceImpl{
-    private final CategoryRepository categoryRepository;
-    private final CampgroundRepository campgroundRepository;
-    public List<CategoryEntity> getCategoryList() {
-        List<CategoryEntity> category = categoryRepository.findAllByOrderByIdAsc();
-        for(CategoryEntity c : category){
-            switch(c.getName()){
-                case "caravan": c.setName("카라반");
-                                break;
-                case "glamping": c.setName("글램핑");
-                                break;
-                case "ground":c.setName("노지");
-                                break;
-                case "kids":c.setName("키즈");
-                                break;
-                case "pet":c.setName("애견동반");
-                                break;
-            }
-        }
-        return  category;
-    }
+@Service
+public class LodgingServiceImpl implements LodgingService{
+    @Autowired
+    CategoryRepository categoryRepository;
+    @Autowired
+    CampgroundRepository campgroundRepository;
 
-//    public List<CampgroundEntity> getItemList() {
-//        /*campgroundRepository.findDistinctByFk_categoryIdContainingOrNameContaining();*/
-//
-//    }
-
-    /*private void validateDuplicateMember(MemberEntity memberEntity) {
-        MemberEntity findMemberEntity = memberRepository.findByUserid(memberEntity.getUserid());
-        if(findMemberEntity != null){
-            throw new IllegalStateException("이미 가입된 회원입니다.");
-        }
-    }
     @Override
-    public UserDetails loadUserByUsername(String userid) throws UsernameNotFoundException {
+    public List<CategoryEntity> getCategoryList() {
+        return  categoryRepository.findAllByOrderByIdAsc();
+    }
 
-        MemberEntity memberEntity = memberRepository.findByUserid(userid);
-
-        if(memberEntity == null){
-            throw new UsernameNotFoundException(userid);
+    @Override
+    public List<CampgroundEntity> getItemList(CampgroundSearchDTO dto) {
+        List<CampgroundEntity> camp = new ArrayList<>();
+        //&으로 나누기
+        if(dto.getLocation_name() != null && !dto.getLocation_name().isEmpty()){
+            System.out.println("비어잇지않아!!!!!!!!!!!");
+            //검색으로 들어온 경우
+            String[] locationArr = dto.getLocation_name().split("&");
+            if(locationArr.length > 1){
+                camp = campgroundRepository.findDistinctByCategory_IdAndNameContainingAndLocation_LocationIn(dto.getCategoryId(), dto.getCampgroundName(), locationArr);
+            }else{
+                System.out.println("비어잇지않아!!!!!!!!!!!2");
+                //&으로 안되어있으면
+                System.out.println(dto.getCategoryId());
+                camp = campgroundRepository.findDistinctByCategory_IdAndLocation_LocationAndNameContaining(dto.getCategoryId(), dto.getLocation_name(), dto.getCampgroundName());
+                System.out.println("size" + camp.size());
+            }
+        }else{
+            //인덱스에서 들어온 경우
+            System.out.println("dddddddddd");
+            CategoryEntity cate = new CategoryEntity();
+            cate.setId(dto.getCategoryId());
+            camp = campgroundRepository.findByCategory(cate);
         }
+        return camp;
 
-        return User.builder()
-                .username(memberEntity.getUserid())
-                .password(memberEntity.getPwd())
-                .roles(memberEntity.getRole().toString())
-                .build();
-    }*/
+    }
+
+    @Override
+    public CampgroundEntity getCampground(Long id){
+        return campgroundRepository.getById(id);
+    }
 }

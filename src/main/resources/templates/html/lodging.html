@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/static/js/lodging.js" defer></script>
+    </script>
     <meta charset="UTF-8">
     <title>카라반 숙소 예약 페이지</title>
     <link rel="icon" type="image/png" href="/static/img/favicon.png">
@@ -38,7 +39,7 @@
 </div>
 
 <div class="content">
-    <form method="post" action="/lodging/search">
+    <form method="post" th:action="@{/lodging/search}">
         <a th:href="@{/}"><img class="logo" src="/static/img/logo_sub_300_100.png" alt="로고 이미지"></a>
         <br>
         <!--<div class="buttons">
@@ -48,28 +49,29 @@
             <a th:href="@{/html/kids}"><button id="k_button" style="width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #FDD835; border-radius: 15px 15px 0 0">키즈</button></a>
             <a th:href="@{/html/pet}"><button id="d_button" style="width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #F4FF81; border-radius: 15px 15px 0 0">애견동반</button></a>
         </div>-->
-       <!--
-       추가분 0901
-       카테고리 이름은 카테고리 테이블에서 꺼내오는게 이상적. th태그 사용
-       -->
+        <!--
+        추가분 0901
+        카테고리 이름은 카테고리 테이블에서 꺼내오는게 이상적. th태그 사용
+        -->
         <div class="buttons" >
-    <!--        타임리프에도 for 를 사용할 수 잇거든-->
-    <!--        length -> 카테고리테이블에서 카테고리 이름을 가져오겟지? 걔네는 배열로써 이름을가져올거아냐 [카라반, 글램핑, ] -> 이 배열의 길이가 버튼 갯수임-->
-    <!--        그러니까 실질적으로 쓰는 button태그는 1개지만 5개가 된다-->
-    <!--        그리고 js로 onclick 을 사용해서 글자색을 바꿧지 -> 그 후에 js에서 연달아서 spring에 가서 유저가 선택한 카테고리 정보를 전달함 -> spring은 테이블가서 카테고리에 해당하는 캠핑장 정보를 꺼내옴-->
-            <button th:each="category : ${categoryList}" th:id="'button_category'+${category.id}" style="width: 80px; height: 30px; font-weight: bold;border: none;cursor: pointer;  border-radius: 15px 15px 0 0 " th:text = "${category.name}">categoryName</button>
+            <!--        타임리프에도 for 를 사용할 수 잇거든-->
+            <!--        length -> 카테고리테이블에서 카테고리 이름을 가져오겟지? 걔네는 배열로써 이름을가져올거아냐 [카라반, 글램핑, ] -> 이 배열의 길이가 버튼 갯수임-->
+            <!--        그러니까 실질적으로 쓰는 button태그는 1개지만 5개가 된다-->
+            <!--        그리고 js로 onclick 을 사용해서 글자색을 바꿧지 -> 그 후에 js에서 연달아서 spring에 가서 유저가 선택한 카테고리 정보를 전달함 -> spring은 테이블가서 카테고리에 해당하는 캠핑장 정보를 꺼내옴-->
+            <a th:each="category : ${categoryList}" th:href="@{/html/lodging(category=${category.id})}"><button type = "button" th:id="'button_category'+${category.id}" th:value="${category.id}"  th:text = "${category.name}">categoryName</button></a>
         </div>
         <br>
         <div class="search-bar">
             <img class="search-icon" src="/static/img/search_icon.png" alt="돋보기 아이콘">
-            <input class="search-input" type="text" id="campgroundName" placeholder="캠핑장명을 검색해 보세요">
+            <input class="search-input" type="text" id="campgroundName" name = "campgroundName" placeholder="캠핑장명을 검색해 보세요">
         </div>
         <br>
         <div class="location-bar">
             <img class="calendar-icon" src="/static/img/calendar_icon.png" alt="달력 아이콘">
             <input class="date-input2" type="text" name="member_name" placeholder="날짜">
             <img class="location-icon" src="/static/img/location_icon.png" alt="지역 아이콘">
-            <input class="location-input" type="text" name="member_name" placeholder="지역">
+            <input class="location-input" type="text" id="location" name="location_name" placeholder="지역">
+            <!-- <input class="location-input" type="text" name="member_name" placeholder="지역"> -->
         </div>
         <div class="subnav">
             <div class="item">서울&경기</div>
@@ -79,16 +81,17 @@
             <div class="item">강원</div>
             <div class="item">제주</div>
         </div>
-<!--</div>-->
-<!--<button class="search-button" style="width: 80px; height: 30px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px">검 색</button>-->
+        <!--</div>-->
+        <!--<button class="search-button" style="width: 80px; height: 30px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px">검 색</button>-->
+        <input type="hidden" id="categoryId" name="categoryId"/>
         <button type = "submit" class="search-button" style="width: 80px; height: 30px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px">검 색</button>
     </form>
 </div>
 <br>
-<div class="banners" style="width: 780px; height: 450px; font-size: larger; margin-bottom: 100px; border-radius: 20px" th:if="${itemList != null}" th:each="item : ${itemList}">
+<div class="banners" th:if="${itemList != null}" th:each="item : ${itemList}">
     <a th:href="@{/html/sublodging(itemId=${item.id})}"><img class="banner" src="/static/img/banner02.png" alt="배너 이미지"></a>
-    <h4 class="name" th:text="item.name">캠핑장 이름</h4>
-    <h4 class="price" th:text="item.price + '원 ~ '">캠핑장 가격</h4>
+    <h4 class="name" th:text="${item.name}" th:id="${item.getCategory().getId()}">캠핑장 이름</h4>
+    <h4 class="price" th:text="${#numbers.formatInteger(item.price, 3, 'COMMA') + '원 ~ '}"  >캠핑장 가격</h4>
 </div>
 
 <!--<div class="banners" style="width: 780px; height: 450px; font-size: larger; margin-bottom: 100px; border-radius: 20px">

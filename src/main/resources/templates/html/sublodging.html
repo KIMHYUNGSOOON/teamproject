@@ -16,9 +16,10 @@
 <!--    <h2 class="logos_name">올 여름 여기어때 숙소</h2>-->
     <div class="name">
         <img class="banner" src="/static/img/banner01.png" alt="로고 이미지">
-        <h5 class="area">강원도(위치 들어갈부분)</h5>
-        <h4 class="logo_name">올 여름 여기어때 숙소</h4>
-        <h3 class="price"> 159,000원</h3>
+        <h5 class="area" th:if="${campground.getLocation().getId()==1}" th:text = "${campground.getLocation().getLocation()}">지역명</h5>
+        <h5 class="area" th:unless="${campground.getLocation().getId()==1}" th:text = "${campground.getLocation().getLocation()}+'도'">지역명</h5>
+        <h4 class="logo_name" th:text = "${campground.getName()}">캠핑장명</h4>
+        <h3 class="price" th:text = "${#numbers.formatInteger(campground.getPrice(), 3, 'COMMA') + '원'}">가격</h3>
     </div>
     <div class="tests">
     <h4>편의시설 안내</h4>

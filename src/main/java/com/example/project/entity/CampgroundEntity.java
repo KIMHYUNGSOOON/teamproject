@@ -1,21 +1,34 @@
 package com.example.project.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.*;
 
 @Entity
+@NoArgsConstructor
+@Getter
+@Setter
+@Table(name = "campground")
 public class CampgroundEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_campground_gen")
+    @SequenceGenerator(name = "seq_campround_gen", sequenceName = "seq_campground", allocationSize = 1)
     private Long id;
 
+    @Column
     private String name;
-    private String fk_categoryId;
-    private String fk_locationId;
-    private int price;
 
-    // 생성자, getter 및 setter
+    @ManyToOne
+    @JoinColumn(name = "fk_categoryid", referencedColumnName = "id")
+    private CategoryEntity category;
+
+    @ManyToOne
+    @JoinColumn(name = "fk_locationid", referencedColumnName = "id")
+    private LocationEntity location;
+
+    @Column
+    private int price;
 }

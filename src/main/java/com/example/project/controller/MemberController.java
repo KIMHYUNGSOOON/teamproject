@@ -4,7 +4,7 @@ import com.example.project.dto.MemberDTO;
 
 
 import com.example.project.entity.MemberEntity;
-import com.example.project.service.MemberService;
+import com.example.project.Service.MemberService;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
