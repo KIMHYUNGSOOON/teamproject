@@ -15,7 +15,8 @@
     </div>
 <!--    <h2 class="logos_name">올 여름 여기어때 숙소</h2>-->
     <div class="name">
-        <img class="banner" src="/static/img/banner01.png" alt="로고 이미지">
+        <img class="banner" th:if="${campground.getId() < 10}" th:src="'/static/img/camp_img/camp_img_0'+${campground.getId()}+'.jpg'" alt="로고 이미지">
+        <img class="banner" th:unless="${campground.getId() < 10}" th:src="'/static/img/camp_img/camp_img_'+${campground.getId()}+'.jpg'" alt="로고 이미지">
         <h5 class="area" th:if="${campground.getLocation().getId()==1}" th:text = "${campground.getLocation().getLocation()}">지역명</h5>
         <h5 class="area" th:unless="${campground.getLocation().getId()==1}" th:text = "${campground.getLocation().getLocation()}+'도'">지역명</h5>
         <h4 class="logo_name" th:text = "${campground.getName()}">캠핑장명</h4>
