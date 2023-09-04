@@ -171,14 +171,3 @@
 }
 });
 });
- document.addEventListener('DOMContentLoaded', function() {
-     // 모든 "banners" 클래스 요소에 클릭 이벤트 리스너를 추가합니다.
-     const banners = document.querySelectorAll('.banners');
-
-     banners.forEach(function(banner, index) {
-         banner.addEventListener('click', function() {
-             // 새 창을 열고 새로운 HTML 파일을 로드합니다.
-             window.open('sublodging.html', '_blank');
-         });
-     });
- });

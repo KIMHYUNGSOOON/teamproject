@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/lodging.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/static/js/lodging.js" defer></script>
+    <meta charset="UTF-8">
+    <title>키즈동반 숙소 예약 페이지</title>
+
+</head>
+<body>
+
+<div class="wrapper">
+    <header>
+        <p class="current-date"></p>
+        <div class="icons">
+                <span id="prev" class="material-symbols-left">
+                    <img src="/static/img/prev_icon.png" alt="이전 아이콘">
+                </span>
+            <span id="next" class="material-symbols-right">
+                    <img src="/static/img/next_icon.png" alt="다음 아이콘">
+                </span>
+        </div>
+    </header>
+    <div class="calendar">
+        <ul class="weeks">
+            <li>일</li>
+            <li>월</li>
+            <li>화</li>
+            <li>수</li>
+            <li>목</li>
+            <li>금</li>
+            <li>토</li>
+        </ul>
+        <ul class="days"></ul>
+    </div>
+</div>
+
+<div class="content">
+    <a th:href="@{/}"><img class="logo" src="/static/img/logo_sub_300_100.png" alt="로고 이미지"></a>
+    <br>
+    <div class="buttons">
+        <a th:href="@{/html/lodging}"><button id="c_button" style=" width: 70px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #9E9D24; border-radius: 15px 15px 0 0 ">카라반</button></a>
+        <a th:href="@{/html/glamping}"><button id="g_button" style=" width: 70px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #AED581; border-radius: 15px 15px 0 0">글램핑</button></a>
+        <a th:href="@{/html/ground}"><button id="n_button" style="width: 70px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #9CCC65; border-radius: 15px 15px 0 0">노지</button></a>
+        <a th:href="@{/html/kids}"> <button id="k_button" style="width: 70px; height: 30px; font-weight: bold;border: none;cursor: pointer; background-color: #FDD835;color: white; border-radius: 15px 15px 0 0">키즈</button></a>
+        <a th:href="@{/html/pet}"> <button id="d_button" style="width: 70px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #F4FF81; border-radius: 15px 15px 0 0">애견동반</button></a>
+    </div>
+    <br>
+    <div class="search-bar">
+        <img class="search-icon" src="/static/img/search_icon.png" alt="돋보기 아이콘">
+        <input class="search-input" type="text" name="member_name" placeholder="캠핑장명을 검색해 보세요">
+    </div>
+    <br>
+    <div class="location-bar">
+        <img class="calendar-icon" src="/static/img/calendar_icon.png" alt="달력 아이콘">
+        <input class="date-input2" type="text" name="member_name" placeholder="날짜">
+        <img class="location-icon" src="/static/img/location_icon.png" alt="지역 아이콘">
+        <input class="location-input" type="text" name="member_name" placeholder="지역">
+    </div>
+    <div class="subnav">
+        <div class="item">서울&경기</div>
+        <div class="item">경상</div>
+        <div class="item">충청</div>
+        <div class="item">전라</div>
+        <div class="item">강원</div>
+        <div class="item">제주</div>
+    </div>
+</div>
+<button class="search-button" style="width: 80px; height: 30px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px">검 색</button>
+<br>
+
+<div class="banners" style="width: 780px; height: 450px; font-size: larger; margin-bottom: 100px; border-radius: 20px">
+    <a th:href="@{/html/sublodging}"><img class="banner" src="/static/img/banner02.png" alt="배너 이미지"></a>
+    <h4 class="name">여기완전어때 카라반</h4>
+    <h4 class="price">185,000원 ~ </h4>
+</div>
+
+<div class="banners" style="width: 780px; height: 450px; font-size: larger; margin-bottom: 100px; border-radius: 20px">
+    <img class="banner" src="/static/img/banner01.png" alt="배너 이미지01">
+    <h4 class="name">여기완전어때 카라반</h4>
+    <h4 class="price">185,000원</h4>
+</div>
+
+<div class="banners" style="width: 780px; height: 450px; font-size: larger; margin-bottom: 100px; border-radius: 20px">
+    <img class="banner" src="/static/img/banner02.png" alt="배너 이미지01">
+    <h4 class="name">여기완전어때 카라반</h4>
+    <h4 class="price">185,000원</h4>
+</div>
+
+<div class="banners" style="width: 780px; height: 450px; font-size: larger; margin-bottom: 100px; border-radius: 20px">
+    <img class="banner" src="/static/img/banner01.png" alt="배너 이미지01">
+    <h4 class="name">여기완전어때 카라반</h4>
+    <h4 class="price">185,000원</h4>
+</div>
+
+<div class="banners" style="width: 780px; height: 450px; font-size: larger; margin-bottom: 100px; border-radius: 20px">
+    <img class="banner" src="/static/img/banner02.png" alt="배너 이미지01">
+    <h4 class="name">여기완전어때 카라반</h4>
+    <h4 class="price">185,000원</h4>
+</div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

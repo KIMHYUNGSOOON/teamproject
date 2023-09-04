@@ -1,48 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <link rel="stylesheet" type="text/css" href="/static/css/latter.css">
+    <script src="/static/js/lodging.js" defer></script>
     <meta charset="UTF-8">
     <title>캠핑후기</title>
 </head>
 <body>
-    <div class="center-container">
-<img class="logo" src="/static/img/logo_sub_300_100.png" alt="로고 이미지">
-        <div class="buttons">
-            <button id="c_button" style=" width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #9E9D24; border-radius: 15px 15px 0 0 ">소모임</button>
-            <button id="g_button" style="width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #AED581; border-radius: 15px 15px 0 0">캠핑용품</button>
-            <button id="n_button" style="width: 80px; height: 30px; font-weight: bold;border: none;cursor: pointer; background-color: #9CCC65;color: white; border-radius: 15px 15px 0 0">후기</button>
-            <button id="k_button" style="width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #FDD835; border-radius: 15px 15px 0 0">꿀팁모음</button>
-            <button id="d_button" style="width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #F4FF81; border-radius: 15px 15px 0 0">미정</button>
-        </div>
+<div class="center-container">
+    <a th:href="@{/}"><img class="logo" src="/static/img/logo_sub_300_100.png" alt="로고 이미지"></a>
+    <div class="buttons">
+        <a th:href="@{/html/moim}"><button id="c_button" style=" width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #9E9D24; border-radius: 15px 15px 0 0 ">소모임</button></a>
+        <a th:href="@{/html/store}"><button id="g_button" style="width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #AED581; border-radius: 15px 15px 0 0">캠핑용품</button></a>
+        <a th:href="@{/html/latter}"><button id="n_button" style="width: 80px; height: 30px; font-weight: bold;border: none;cursor: pointer; background-color: #9CCC65;color: white; border-radius: 15px 15px 0 0">후기</button></a>
+        <a th:href="@{/html/tip}"><button id="k_button" style="width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #FDD835; border-radius: 15px 15px 0 0">꿀팁모음</button></a>
+        <button id="d_button" style="width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #F4FF81; border-radius: 15px 15px 0 0">미정</button>
+    </div>
 
     <img class="search-icon" src="/static/img/search_icon.png" alt="돋보기 아이콘">
     <input class="search-input" type="text" name="member_name" placeholder="아이디로 검색하기">
 
-<button class="search-button" style="width: 80px; height: 40px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px">검색</button>
-<button class="write-button" style="width: 80px; height: 40px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px">글쓰기</button>
-        <div class="main">
-<img class="level" src="/static/img/moim_img/1st.PNG" alt="1단계 등급">
-<input class="nickname2" type="text" name="member_name" placeholder="황장군">
-<input class="date" type="text" name="member_name" placeholder="2023-08-07">
-<p>늦게 알아보느라 선택지가 많지 않았는데 처음 가보는곳이라 망설이다 리뷰믿고 갔습니다.
-    개수대 화장실 샤워실 청결도 최상 !!!!!
-    성수기라 캠퍼들도 많았는데 휴지통에 휴지 쌓이는걸 못봤네요~~~ 캠장님 시설관리 끝판왕!!
-    다음엔 방갈로 캠핑자리 예약해서 갈꺼에요
-</p>
-        </div>
-    </div>
-    <div class="imgstest">
+    <button class="search-button" style="width: 80px; height: 40px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px">검색</button>
+    <a th:href="@{/html/sublatterwrite}"><button class="write-button" style="width: 80px; height: 40px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px">글쓰기</button></a>
+    <a th:href="@{/html/sublatter}"><div class="main">
+        <img class="level" src="/static/img/moim_img/1st.PNG" alt="1단계 등급">
+        <input class="nickname2" type="text" name="member_name" placeholder="황장군">
+        <input class="date" type="text" name="member_name" placeholder="2023-08-07">
+        <p>늦게 알아보느라 선택지가 많지 않았는데 처음 가보는곳이라 망설이다 리뷰믿고 갔습니다.
+            개수대 화장실 샤워실 청결도 최상 !!!!!
+            성수기라 캠퍼들도 많았는데 휴지통에 휴지 쌓이는걸 못봤네요~~~ 캠장님 시설관리 끝판왕!!
+            다음엔 방갈로 캠핑자리 예약해서 갈꺼에요
+        </p>
+    </div></a>
+</div>
+<div class="imgstest">
     <img class="imgs1" src="/static/img/latter_img/test1.png" alt="배너 이미지01">
-        <br>
+    <br>
     <img class="imgs2" src="/static/img/latter_img/test2.png" alt="배너 이미지02">
     <img class="imgs3" src="/static/img/latter_img/test3.png" alt="배너 이미지03">
-    </div>
-    <div class="name">
-        <img class="imgstests" src="/static/img/latter_img/test1.png" alt="배너 이미지01">
-        <input class="witch" type="text" placeholder="강원 영월">
-        <input class="names" type="text"  placeholder="금방아 민박 캠핑장 C사이트 25">
-    </div>
+</div>
+<div class="name">
+    <img class="imgstests" src="/static/img/latter_img/test1.png" alt="배너 이미지01">
+    <input class="witch" type="text" placeholder="강원 영월">
+    <input class="names" type="text"  placeholder="금방아 민박 캠핑장 C사이트 25">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/sublatterwrite.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/static/js/lodging.js" defer></script>
+    <title>수정하기</title>
+</head>
+<body>
+<div class="content">
+    <a th:href="@{/}"><img class="logo" src="/static/img/logo_sub_300_100.png" alt="로고 이미지"></a>
+    <div class="buttons">
+        <a th:href="@{/html/moim}"><button id="c_button" style="font-family: 'GmarketSansMedium'; width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #9E9D24; border-radius: 15px 15px 0 0 ">소모임</button></a>
+        <a th:href="@{/html/store}"><button id="g_button" style="font-family: 'GmarketSansMedium'; width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #AED581; border-radius: 15px 15px 0 0">캠핑용품</button></a>
+        <a th:href="@{/html/latter}"><button id="n_button" style="font-family: 'GmarketSansMedium'; width: 80px; height: 30px; font-weight: bold;border: none;cursor: pointer; background-color: #9CCC65;color: white; border-radius: 15px 15px 0 0">후기</button></a>
+        <a th:href="@{/html/tip}"><button id="k_button" style="font-family: 'GmarketSansMedium'; width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #FDD835; border-radius: 15px 15px 0 0">꿀팁모음</button></a>
+        <button id="d_button" style="font-family: 'GmarketSansMedium'; width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #F4FF81; border-radius: 15px 15px 0 0">미정</button>
+        <button class="search-button">수정 하기</button>
+    </div>
+    <div class="area">
+        <h2 class="name">수정하기</h2>
+        <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
+        <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
+        <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
+        <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
+        <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
+        <h4>방문일</h4>
+        <input class="date" type="text" placeholder="               /               /           ">
+        <img class="calendar-icon" src="/static/img/calendar_icon.png" alt="달력 아이콘">
+    </div>
+    <div class="text">
+        <h4>제목</h4>
+        <input class="dates" type="text" placeholder="         제목을 입력해주세요.">
+    </div>
+
+    <div class="texts">
+        <h4>내용</h4>
+        <input class="datess" type="text" placeholder=" 내용을 입력해 주세요.">
+    </div>
+    <div class="wrapper">
+        <header>
+            <p class="current-date"></p>
+            <div class="icons">
+                <span id="prev" class="material-symbols-left">
+                    <img src="/static/img/prev_icon.png" alt="이전 아이콘">
+                </span>
+                <span id="next" class="material-symbols-right">
+                    <img src="/static/img/next_icon.png" alt="다음 아이콘">
+                </span>
+            </div>
+        </header>
+        <div class="calendar">
+            <ul class="weeks">
+                <li>일</li>
+                <li>월</li>
+                <li>화</li>
+                <li>수</li>
+                <li>목</li>
+                <li>금</li>
+                <li>토</li>
+            </ul>
+            <ul class="days"></ul>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

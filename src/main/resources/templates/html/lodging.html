@@ -1,13 +1,12 @@
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <link rel="stylesheet" type="text/css" href="/static/css/lodging.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/static/js/lodging.js" defer></script>
     <meta charset="UTF-8">
-    <title>숙소 예약 페이지</title>
-
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>카라반 숙소 예약 페이지</title>
 </head>
 <body>
 
@@ -38,14 +37,14 @@
 </div>
 
 <div class="content">
-    <a th:href="@{/html/main}"><img class="logo" src="/static/img/logo_sub_300_100.png" alt="로고 이미지"></a>
+    <a th:href="@{/}"><img class="logo" src="/static/img/logo_sub_300_100.png" alt="로고 이미지"></a>
     <br>
     <div class="buttons">
-        <button id="c_button" style=" width: 60px; height: 30px; font-weight: bold;border: none; background-color: #9E9D24;color: white; border-radius: 15px 15px 0 0 ">카라반</button>
-        <button id="g_button" style="width: 60px; height: 30px; font-weight: normal;border: none; background-color: #AED581; border-radius: 15px 15px 0 0">글램핑</button>
-        <button id="n_button" style="width: 60px; height: 30px; font-weight: normal;border: none; background-color: #9CCC65; border-radius: 15px 15px 0 0">노지</button>
-        <button id="k_button" style="width: 60px; height: 30px; font-weight: normal;border: none; background-color: #FDD835; border-radius: 15px 15px 0 0">키즈</button>
-        <button id="d_button" style="width: 70px; height: 30px; font-weight: normal;border: none; background-color: #F4FF81; border-radius: 15px 15px 0 0">애견동반</button>
+        <a th:href="@{/html/lodging}"><button id="c_button" style=" width: 60px; height: 30px; font-weight: bold;border: none;cursor: pointer; background-color: #9E9D24;color: white; border-radius: 15px 15px 0 0 ">카라반</button></a>
+        <a th:href="@{/html/glamping}"><button id="g_button" style="width: 60px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #AED581; border-radius: 15px 15px 0 0">글램핑</button></a>
+        <a th:href="@{/html/ground}"><button id="n_button" style="width: 60px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #9CCC65; border-radius: 15px 15px 0 0">노지</button></a>
+        <a th:href="@{/html/kids}"><button id="k_button" style="width: 60px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #FDD835; border-radius: 15px 15px 0 0">키즈</button></a>
+        <a th:href="@{/html/pet}"><button id="d_button" style="width: 70px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #F4FF81; border-radius: 15px 15px 0 0">애견동반</button></a>
     </div>
     <br>
     <div class="search-bar">

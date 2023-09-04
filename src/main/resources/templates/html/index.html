@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캠프어스</title>
+</head>
+
+<body>
+<div id="wrap">
+    <header id="header" class="clearfix">
+        <h1 class="logo">
+            <a th:href="@{/}"><img src="/static/img/main_img/logo_main_200.png" alt="로고"></a>
+        </h1>
+        <nav class="nav">
+            <ul class="clearfix">
+                <li><a th:href="@{/html/Login}">로그인</a></li>
+                <li><a th:href="@{members/new}">회원가입</a></li>
+                <li><a th:href="@{/html/Pwd}">아이디/비밀번호 찾기</a></li>
+                <li><a th:href="@{/html/bookingmain}">예약확인</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="banner">
+        <ul class="clearfix">
+            <li><img src="/static/img/main_img/banner_01.png" alt="이미지슬라이드01"></li>
+            <li><img src="/static/img/main_img/banner_02.png" alt="이미지슬라이드02"></li>
+            <li><img src="/static/img/main_img/banner_03.png" alt="이미지슬라이드03"></li>
+        </ul>
+    </section>
+
+    <section id="category">
+        <ul class="clearfix">
+            <li><a th:href="@{/html/lodging}"><img src="/static/img/main_img/category_01.png" alt="카테고리01">카라반</a></li>
+            <li><a th:href="@{/html/glamping}"><img src="/static/img/main_img/category_02.png" alt="카테고리02">글램핑</a></li>
+            <li><a th:href="@{/html/ground}"><img src="/static/img/main_img/category_03.png" alt="카테고리03">노지</a></li>
+            <li><a th:href="@{/html/kids}"><img src="/static/img/main_img/category_04.png" alt="카테고리04">키즈동반</a></li>
+            <li><a th:href="@{/html/pet}"><img src="/static/img/main_img/category_05.png" alt="카테고리05">애견동반</a></li>
+
+        </ul>
+    </section>
+
+    <section id="contents">
+        <div class="container">
+            <div class="contents clearfix">
+                <div class="notice">
+                    <h3>공지사항</h3>
+                    <ul>
+                        <li class="click"><a th:href="@{/html/notice}">[파크 운영 일부 변경 안내] '유원지, 테마파크의 코로나바이러스감염증-19 감염 확대 예방 가이드라인'의
+                            개정에 따라 2023년 3월 13일부터 파크에서의 마스크 착용 기준을 변경합니다.</a></li>
+                        <li><a href="#"> [파크 티켓 구매 방법에 관한 안내] 입장일이 2023년 4월 1일 이후인 파크 티켓부터 티켓 구매 페이지가 변경됩니다. </a>
+                        </li>
+                        <li><a href="#">[디즈니랜드와 디즈니씨 파크 티켓] 파크 티켓 환불 요청은 더 이상 허용되지 않습니다.</a></li>
+                        <li><a href="#">1983년~2001년에 구매하신 티켓으로 유효기간이 지난 경우에는 이용 또는 변경하실 수 없습니다. </a></li>
+                        <li><a href="#">디즈니랜드 / 디즈니씨 파크 티켓 환불 접수 종료 안내 (2023년 10월 접수 종료)</a></li>
+                    </ul>
+                </div>
+                <div class="friends">
+                    <h3>친구찾기</h3>
+                    <ul>
+                        <li><a th:href="@{/html/submoim}">안녕하세요 자주가는 여행은 아니지만이번엔 정말 좋은 장소를 찾아서 넘 기쁜
+                            마음에 몇자적어봅니다 깨끗하고 맑은공기는 물론이고넘 시원하고  같ㅇㅣ 갈 사람 구함같ㅇㅣ갈 사람 구함같ㅇㅣ 갈 사람 구함같ㅇㅣ 갈 사람 구함같ㅇㅣ •••</a></li>
+                        <li><a th:href="@{/html/submoim}">안녕하세요 자주가는 여행은 아니지만이번엔 정말 좋은 장소를 찾아서 넘 기쁜
+                            마음에 몇자적어봅니다
+                            깨끗하고 맑은공기는 물론이고넘 시원하고  같ㅇㅣ 갈 사람 구함같ㅇㅣ갈 사람 구함같ㅇㅣ 갈 사람 구함같ㅇㅣ 갈 사람 구함같ㅇㅣ •••</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="letter">
+        <div class="letter clearfix">
+            <div class="letter-content">
+                <h3>캠핑 후기</h3>
+                <a th:href="@{/html/sublatter}"><div class="review">
+                    <div class="image-container">
+                        <img src="/path/to/image.jpg" alt="이미지" width="150" height="150">
+                    </div>
+                    <div class="review-text">
+                        <p>
+                            늦게 알아보느라 선택지가 많지 않았는데 처음 가보는 곳이라 망설이다 리뷰믿고 갔습니다.
+                            개수대 화장실 샤워실 청결도 최상 !!!!!
+                            성수기라 캠퍼들도 많았는데 휴지통에 휴지 쌓이는걸 못봤네요~~~ 캠장님 시설관리 끝판왕!!
+                            다음엔 방갈로 캠핑자리 예약해서 갈꺼에요
+                        </p>
+                        <div class="additional-info">
+                            <div class="circle"></div>
+                            <p>여기어때캠핑장</p>
+                        </div>
+                    </div>
+                </div></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="tip">
+        <div class="tip clearfix">
+            <div class="tip-content">
+                <h3>꿀팁 모음</h3>
+                <a th:href="@{/html/subtip}"><div class="review">
+                    <div class="image-container">
+                        <img src="/path/to/image.jpg" alt="이미지" width="150" height="150">
+                    </div>
+                    <div class="review-text">
+                        <p>
+                            우중 캠핑 준비 꿀팁
+                        </p>
+                        <div class="additional-info">
+                            <div class="circle"></div>
+                            <p>여기어때캠핑장</p>
+                        </div>
+                    </div>
+                </div></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="recommend">
+        <div class="recommend clearfix">
+            <div class="recommend-content">
+                <h3>이달의 추천??? or 인기상품?????</h3>
+                <a th:href="@{/html/substore}">
+                <div class="sample">
+                    <div class="inputs">
+                        <input class="brand" type="text" placeholder="브랜드명">
+                        <input class="edit" type="text" placeholder="제품명">
+                        <input class="price" type="text" placeholder="가격">
+                    </div>
+                </div>
+                </a>
+                <a th:href="@{/html/substore}">
+                    <div class="sample1">
+                        <div class="inputs1">
+                            <input class="brand" type="text" placeholder="브랜드명">
+                            <input class="edit" type="text" placeholder="제품명">
+                            <input class="price" type="text" placeholder="가격">
+                        </div>
+                    </div>
+                </a>
+                <a th:href="@{/html/substore}"><div class="sample2">
+                    <div class="inputs2">
+                        <input class="brand" type="text" placeholder="브랜드명">
+                        <input class="edit" type="text" placeholder="제품명">
+                        <input class="price" type="text" placeholder="가격">
+                    </div>
+                </div></a>
+                <a th:href="@{/html/substore}"><div class="sample3">
+                    <div class="inputs3">
+                        <input class="brand" type="text" placeholder="브랜드명">
+                        <input class="edit" type="text" placeholder="제품명">
+                        <input class="price" type="text" placeholder="가격">
+                    </div>
+                </div></a>
+                <a th:href="@{/html/substore}"><div class="sample4">
+                    <div class="inputs4">
+                        <input class="brand" type="text" placeholder="브랜드명">
+                        <input class="edit" type="text" placeholder="제품명">
+                        <input class="price" type="text" placeholder="가격">
+                    </div>
+                </div></a>
+                <a th:href="@{/html/substore}"><div class="sample5">
+                    <div class="inputs5">
+                        <input class="brand" type="text" placeholder="브랜드명">
+                        <input class="edit" type="text" placeholder="제품명">
+                        <input class="price" type="text" placeholder="가격">
+                    </div>
+                </div></a>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+
+        $("#banner>ul>li").hide();
+        $("#banner>ul>li:first-child").show();
+
+        setInterval(function () {
+            $("#banner>ul>li:first-child").fadeOut(1000).next().fadeIn(1000).end(1000).appendTo("#banner>ul");
+        }, 1500);
+    </script>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+
+
+}
+.input-container-wrapper {
+    border: 2px solid #8bc34a; /* Add a solid border */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Add rounded corners */
+    background-color: #fff; /* Add a background color */
+    margin-top: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+}
+
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.input-container img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.input-container input {
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 5px;
+    outline: none;
+}
+
+.input-container input:focus {
+    border-bottom: 2px solid #000;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: row; /* Change flex direction to row */
+    justify-content: center; /* Center aligns the links horizontally */
+    margin-top: 30px;
+}
+
+.link {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    margin: 0 10px; /* Add horizontal spacing between the links */
+}
+
+.separator {
+    margin: 0 10px; /* Adjust the spacing between the vertical bars */
+    color: #000;
+}
+
+.login-btn {
+    cursor: pointer; /* Change cursor to indicate interactivity */
+    display: inline-block;
+    padding: 13px 70px;
+    background-color: #9ccc65;
+    border: 1px solid #ffffff;
+    border-radius: 18px;
+    font-weight: bold; /* Make the text bold */
+    font-size: 20px; /* Adjust the font size */
+    color: #fff; /* Set the text color to white */
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 30px;
+}
+
+.login-btn:hover {
+    background-color: #fdd835;
+    color: #fff;
+}

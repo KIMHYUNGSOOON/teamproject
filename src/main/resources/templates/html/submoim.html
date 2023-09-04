@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <link rel="stylesheet" type="text/css" href="/static/css/submoim.css">
     <script src="/static/js/submoim.js" defer></script>
@@ -9,17 +9,17 @@
 </head>
 <body>
 
-    <img class="logo" src="/static/img/logo_sub_300_100.png" alt="로고 이미지">
+<a th:href="@{/}"><img class="logo" src="/static/img/logo_sub_300_100.png" alt="로고 이미지"></a>
 
 <div class="main">
     <h3 class="text">(제목)여기 좋아 보이는데 같이 가실분 계신가요?</h3>
     <img class="level" src="/static/img/moim_img/1st.PNG" alt="1단계 등급">
     <div class="sum">
-    <input class="nick" type="text" name="member_name" placeholder="나은삐">
-    <input class="name" type="text" name="member_name" placeholder="이름 : 공나은">
-    <input class="date" type="text" name="member_name" placeholder="작성일 : (2023/08/28)">
-    <input class="look" type="text" name="member_name" placeholder="조회수 (1)">
-    <input class="chat" type="text" name="member_name" placeholder="댓글수 (1)">
+        <input class="nick" type="text" name="member_name" placeholder="나은삐">
+        <input class="name" type="text" name="member_name" placeholder="이름 : 공나은">
+        <input class="date" type="text" name="member_name" placeholder="작성일 : (2023/08/28)">
+        <input class="look" type="text" name="member_name" placeholder="조회수 (1)">
+        <input class="chat" type="text" name="member_name" placeholder="댓글수 (1)">
     </div>
 
     <div class="sub-banner-container">
@@ -43,23 +43,23 @@
     </div>
 
     <p>오랜만에 노지로 캠핑을 떠났다. 1박 2일 일정이라 캠핑장을 가기엔 그렇고 그래서 목적지 없이 노지장비를 챙겨 달려가다 친구의 소개로 알게 된 청송 노지캠핑 장소로 목적지를 정하고 도착을 하니 해가 떨어지려 하더라.. 4륜차가 아니라면 들어갈 수 없는 곳이라 서둘러 달려왔더니 다행이도 어두워지기 전에 자리를 잡을 수 있었고 세팅을 하고 나니 해가 똑~ 떨어지는 마법이.. 그런데 어찌 컴컴한게 좀 무섭기도 했었던 밤.. 그 후기를 기록해 본다.
-    평소에도 랜턴은 항상 넉넉하게 다니다 보니 이리 저리 걸어두고 불을 밝혀 본다. 우리가족이 머무는 청송 노지캠핑 장소 외에는 시커먼스.. 구름도 많다 보니 더 어둑한 분위기에서 캠핑을 즐길 수 있었는데 그럼에도 불구하고 자유로운 캠핑이 가능했기에 좋았던 첫날 밤..
-    혹시나 비가올까 싶어 초간단 모드로 세팅을 하고.. (항상 안전이 최우선이니까^^) 바로 앞으로 흐르는 계곡물에 불을 비춰보니 작은 피래미들이 얼마나 많은지~ ㅎㅎ해루질장비도 챙겨왔더라면 한 번 들어가볼려고 했는데 ㅎㅎ
-    노지에서는 항상 루프탑텐트를 이용한다. 아무래도 관리되지 않은 바닥이라 벌레들도 많고 또, 혹시나 짐승들이 나올수도 있고 등등등 ㅋㅋ 그래서 겁많은 나에게는 노지에서는 루프탑이 아니라면 하루밤을 보낸다는 건 상상할 수 없는 일이다. ㅋㅋ
-    오는길에 사왔던 김밥과 커피로 저녁을 해결한다. 술도 챙겨왔는데 구름이 많고 꼭 비가 올것만 같아 자제를 했는데 결론은 비는 개뿔~ ㅎ
+        평소에도 랜턴은 항상 넉넉하게 다니다 보니 이리 저리 걸어두고 불을 밝혀 본다. 우리가족이 머무는 청송 노지캠핑 장소 외에는 시커먼스.. 구름도 많다 보니 더 어둑한 분위기에서 캠핑을 즐길 수 있었는데 그럼에도 불구하고 자유로운 캠핑이 가능했기에 좋았던 첫날 밤..
+        혹시나 비가올까 싶어 초간단 모드로 세팅을 하고.. (항상 안전이 최우선이니까^^) 바로 앞으로 흐르는 계곡물에 불을 비춰보니 작은 피래미들이 얼마나 많은지~ ㅎㅎ해루질장비도 챙겨왔더라면 한 번 들어가볼려고 했는데 ㅎㅎ
+        노지에서는 항상 루프탑텐트를 이용한다. 아무래도 관리되지 않은 바닥이라 벌레들도 많고 또, 혹시나 짐승들이 나올수도 있고 등등등 ㅋㅋ 그래서 겁많은 나에게는 노지에서는 루프탑이 아니라면 하루밤을 보낸다는 건 상상할 수 없는 일이다. ㅋㅋ
+        오는길에 사왔던 김밥과 커피로 저녁을 해결한다. 술도 챙겨왔는데 구름이 많고 꼭 비가 올것만 같아 자제를 했는데 결론은 비는 개뿔~ ㅎ
 
-    너무 간단하게 세팅을 해뒀나 싶어 작은 랜턴도 하나 밝혀 본다. 이런 은은한 빛이라도 있어야 나름 캠핑갬성도 좀 느끼지 ㅎㅎ 그렇게 청송 노지캠핑에서 우리 가족은 늘 그렇듯이 특별한 일 없이 첫날밤을 맞이한다.
-    다음날.
+        너무 간단하게 세팅을 해뒀나 싶어 작은 랜턴도 하나 밝혀 본다. 이런 은은한 빛이라도 있어야 나름 캠핑갬성도 좀 느끼지 ㅎㅎ 그렇게 청송 노지캠핑에서 우리 가족은 늘 그렇듯이 특별한 일 없이 첫날밤을 맞이한다.
+        다음날.
 
-    밤새도록 어두컴컴했던 구름들은 어디가고 날이 쨍 하고 맑아 진다. 더우면 도망이라도 갈려고 했는데 루프탑타프아래 그늘에는 그래도 버틸만 하더라 바람도 불어주고 .. 여튼, 아침잠이 많은 우리집 두 여자들은 일어나자마자 계곡에 발을 담그고 커피 한 잔으로 잠을 깨는 중 ㅋ
-    노지캠핑을 다니지만 파워뱅크가 있다 보니 전기밥솥으로 맛있는 밥을 먹을 수 있는 호사도 누릴 수 있다.
-    요즘 휴대용으로 잘 사용하고 있는 주파집 집게선풍기 ㅋㅋ 어디든 집어두면 되니까 너무 편하다는 손에 안들고 있어서 짱 ㅋ<br>
-    노지에서도 맛있는 음식은 빼놓을 수 없지.. 닭갈비로 아점을 먹기로 하고 지글지글 볶는중 ..
-    청송 노지캠핑중 빈이가 흘린 과자를.. 와이프가 열심히 줍는 중.. 노지에서는 쓰레기를 버리면 안되니 꼭 머문 자리는 깔끔하게 클린캠핑 하시길!! 여러 미디어에서 노지에서 캠핑하는 캠핑족들 때문에 몸살을 앓고 있다는 뉴스가 주구장창 나와도 다녀보면 전혀 나아지지가 않음.. 말 진짜 안들음~ㅋㅋㅋ
+        밤새도록 어두컴컴했던 구름들은 어디가고 날이 쨍 하고 맑아 진다. 더우면 도망이라도 갈려고 했는데 루프탑타프아래 그늘에는 그래도 버틸만 하더라 바람도 불어주고 .. 여튼, 아침잠이 많은 우리집 두 여자들은 일어나자마자 계곡에 발을 담그고 커피 한 잔으로 잠을 깨는 중 ㅋ
+        노지캠핑을 다니지만 파워뱅크가 있다 보니 전기밥솥으로 맛있는 밥을 먹을 수 있는 호사도 누릴 수 있다.
+        요즘 휴대용으로 잘 사용하고 있는 주파집 집게선풍기 ㅋㅋ 어디든 집어두면 되니까 너무 편하다는 손에 안들고 있어서 짱 ㅋ<br>
+        노지에서도 맛있는 음식은 빼놓을 수 없지.. 닭갈비로 아점을 먹기로 하고 지글지글 볶는중 ..
+        청송 노지캠핑중 빈이가 흘린 과자를.. 와이프가 열심히 줍는 중.. 노지에서는 쓰레기를 버리면 안되니 꼭 머문 자리는 깔끔하게 클린캠핑 하시길!! 여러 미디어에서 노지에서 캠핑하는 캠핑족들 때문에 몸살을 앓고 있다는 뉴스가 주구장창 나와도 다녀보면 전혀 나아지지가 않음.. 말 진짜 안들음~ㅋㅋㅋ
     </p>
     <input class="search-input" type="text" name="member_name" placeholder="여기다가 댓글을 입력하고 댓글쓰기 버튼을 누르면 아래에 댓글이 등록됩니다.">
     <button class="search-button" style="width: 80px; height: 30px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px">댓글쓰기</button>
-    <button class="search-button" style="width: 80px; height: 30px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px">이전으로</button>
+    <a th:href="@{/html/moim}"><button class="search-button" style="width: 80px; height: 30px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px">목록보기</button></a>
     <br>
     <img class="level1" src="/static/img/moim_img/1st.PNG" alt="1단계 등급">
     <input class="nickname" type="text" name="member_name" placeholder="나은삐">
@@ -69,7 +69,7 @@
     <input class="nickname2" type="text" name="member_name" placeholder="황장군">
     <input class="dattext2" type="text" name="member_name" placeholder="여기 좋아보임">
 </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

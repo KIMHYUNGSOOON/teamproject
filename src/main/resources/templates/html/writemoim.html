@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <link rel="stylesheet" type="text/css" href="/static/css/writemoim.css">
     <meta charset="UTF-8">
@@ -7,25 +7,25 @@
 </head>
 <body>
 
-    <img class="logo" src="/static/img/logo_sub_300_100.png" alt="로고 이미지">
-    <div class="bodys">
+<a th:href="@{/}"><img class="logo" src="/static/img/logo_sub_300_100.png" alt="로고 이미지"></a>
+<div class="bodys">
     <h2 class="first">작성하기</h2>
     <div class="ta">
-    <h3>메인 이미지 삽입</h3>
-    <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
-    <h3>서브 이미지 삽입</h3>
-    <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
-    <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
-    <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
-    <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
+        <h3>메인 이미지 삽입</h3>
+        <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
+        <h3>서브 이미지 삽입</h3>
+        <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
+        <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
+        <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
+        <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
 
-    <h3>제목</h3>
-    <input class="nick" type="text" placeholder="제목을 작성해주세요.">
-    <h3>내용</h3>
+        <h3>제목</h3>
+        <input class="nick" type="text" placeholder="제목을 작성해주세요.">
+        <h3>내용</h3>
         <input class="nicks" type="text" name="member_name" placeholder="내용을 작성해주세요.">
     </div>
     <button class="search-button" >뒤로가기</button>
     <button class="search-button" >작성하기</button>
-    </div>
+</div>
 </body>
 </html>
