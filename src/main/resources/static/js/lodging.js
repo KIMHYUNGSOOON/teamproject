@@ -242,11 +242,22 @@ window.onload = function() {
         document.querySelector("input[id='location']").value = e.target.innerText;
     });
 
+    const no_result_category_id = document.querySelector("span.no_result");
+    console.log("결과값 없었어! ",no_result_category_id.id);
     const category_id = document.querySelector("div.banners > h4.name");
     const btn = document.querySelectorAll("div.buttons > a > button");
     btn.forEach(item => {
-        if(item.value ==  category_id.id){
-            item.style.color = "white";
+        if(no_result_category_id.id != null && no_result_category_id.id != ""){
+            //검색결과가 없었을 경우
+            if(item.value == no_result_category_id.id){
+                item.style.color = "white";
+                document.querySelector("input[id='categoryId']").value = no_result_category_id.id;
+            }
+        }else{
+            if(item.value ==  category_id.id){
+                item.style.color = "white";
+                document.querySelector("input[id='categoryId']").value = category_id.id;
+            }
         }
     })
 };

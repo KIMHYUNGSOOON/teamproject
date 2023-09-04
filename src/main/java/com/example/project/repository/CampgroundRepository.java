@@ -10,10 +10,12 @@ public interface CampgroundRepository extends JpaRepository<CampgroundEntity, Lo
 
     CampgroundEntity findByName(String name);
 
-    List<CampgroundEntity> findDistinctByCategory_IdAndLocation_LocationAndNameContaining(Long CategoryId, String location, String campgroundName);
-    //List<CampgroundEntity> findDistinctByCategory_IdContainingOrLocationEntity_LocationContainingOrNameContaining(CategoryEntity category, LocationEntity location, String campgroundName);
+    List<CampgroundEntity> findDistinctByCategory_IdAndLocation_LocationAndNameContainingOrderByIdAsc(Long CategoryId, String location, String campgroundName);
 
-    List<CampgroundEntity> findDistinctByCategory_IdAndNameContainingAndLocation_LocationIn(Long CategoryId, String campgroundName, String[] location);
+    List<CampgroundEntity> findDistinctByCategory_IdAndNameContainingOrderByIdAsc(Long CategoryId, String campgroundName);
+
+
+    List<CampgroundEntity> findDistinctByCategory_IdAndNameContainingAndLocation_LocationInOrderByIdAsc(Long CategoryId, String campgroundName, String[] location);
 
     CampgroundEntity getById(Long id);
 

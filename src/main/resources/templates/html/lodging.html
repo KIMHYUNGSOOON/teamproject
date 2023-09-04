@@ -88,8 +88,11 @@
     </form>
 </div>
 <br>
-<div class="banners" th:if="${itemList != null}" th:each="item : ${itemList}">
+<span class="no_result" th:id="${categoryId}" style="display: none;"></span>
+<div class="banners" th:if="${!#lists.isEmpty(itemList)}" th:each="item : ${itemList}">
     <a th:href="@{/html/sublodging(itemId=${item.id})}"><img class="banner" src="/static/img/banner02.png" alt="배너 이미지"></a>
+    <h5 class="area" th:if="${item.getLocation().getId()==1}" th:text = "${item.getLocation().getLocation()}">지역명</h5>
+    <h5 class="area" th:unless="${item.getLocation().getId()==1}" th:text = "${item.getLocation().getLocation()}+'도'">지역명</h5>
     <h4 class="name" th:text="${item.name}" th:id="${item.getCategory().getId()}">캠핑장 이름</h4>
     <h4 class="price" th:text="${#numbers.formatInteger(item.price, 3, 'COMMA') + '원 ~ '}"  >캠핑장 가격</h4>
 </div>

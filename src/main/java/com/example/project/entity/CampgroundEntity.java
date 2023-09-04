@@ -21,11 +21,11 @@ public class CampgroundEntity {
     @Column
     private String name;
 
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "fk_categoryid", referencedColumnName = "id")
     private CategoryEntity category;
 
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "fk_locationid", referencedColumnName = "id")
     private LocationEntity location;
 
