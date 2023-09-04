@@ -89,6 +89,7 @@
 </div>
 <br>
 <span class="no_result" th:id="${categoryId}" style="display: none;"></span>
+
 <div class="banners" th:if="${!#lists.isEmpty(itemList)}" th:each="item : ${itemList}">
     <a th:href="@{/html/sublodging(itemId=${item.id})}">
         <img class="banner" th:if="${item.id < 10}" th:src="'/static/img/camp_img/camp_img_0'+${item.id}+'.jpg'" alt="배너 이미지">
@@ -100,29 +101,6 @@
     <h4 class="price" th:text="${#numbers.formatInteger(item.price, 3, 'COMMA') + '원 ~ '}"  >캠핑장 가격</h4>
 </div>
 
-<!--<div class="banners" style="width: 780px; height: 450px; font-size: larger; margin-bottom: 100px; border-radius: 20px">
-    <img class="banner" src="/static/img/banner01.png" alt="배너 이미지01">
-    <h4 class="name">여기완전어때 카라반</h4>
-    <h4 class="price">185,000원</h4>
-</div>
-
-<div class="banners" style="width: 780px; height: 450px; font-size: larger; margin-bottom: 100px; border-radius: 20px">
-    <img class="banner" src="/static/img/banner02.png" alt="배너 이미지01">
-    <h4 class="name">여기완전어때 카라반</h4>
-    <h4 class="price">185,000원</h4>
-</div>
-
-<div class="banners" style="width: 780px; height: 450px; font-size: larger; margin-bottom: 100px; border-radius: 20px">
-    <img class="banner" src="/static/img/banner01.png" alt="배너 이미지01">
-    <h4 class="name">여기완전어때 카라반</h4>
-    <h4 class="price">185,000원</h4>
-</div>
-
-<div class="banners" style="width: 780px; height: 450px; font-size: larger; margin-bottom: 100px; border-radius: 20px">
-    <img class="banner" src="/static/img/banner02.png" alt="배너 이미지01">
-    <h4 class="name">여기완전어때 카라반</h4>
-    <h4 class="price">185,000원</h4>
-</div>-->
 
 </div>
 <!-- jQuery와 JavaScript 스크립트 링크 추가 -->

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>예약하기</title>
+    <title>숙소 상세 보기</title>
     <link rel="icon" type="image/png" href="/static/img/favicon.png">
 </head>
 <body>
@@ -14,14 +14,16 @@
         <a th:href="@{/}"> <img class="logo" src="/static/img/logo_sub_300_100.png" alt="로고 이미지"></a>
     </div>
 <!--    <h2 class="logos_name">올 여름 여기어때 숙소</h2>-->
-    <div class="name">
+
+    <div class="banners">
         <img class="banner" th:if="${campground.getId() < 10}" th:src="'/static/img/camp_img/camp_img_0'+${campground.getId()}+'.jpg'" alt="로고 이미지">
         <img class="banner" th:unless="${campground.getId() < 10}" th:src="'/static/img/camp_img/camp_img_'+${campground.getId()}+'.jpg'" alt="로고 이미지">
         <h5 class="area" th:if="${campground.getLocation().getId()==1}" th:text = "${campground.getLocation().getLocation()}">지역명</h5>
         <h5 class="area" th:unless="${campground.getLocation().getId()==1}" th:text = "${campground.getLocation().getLocation()}+'도'">지역명</h5>
-        <h4 class="logo_name" th:text = "${campground.getName()}">캠핑장명</h4>
-        <h3 class="price" th:text = "${#numbers.formatInteger(campground.getPrice(), 3, 'COMMA') + '원'}">가격</h3>
+        <h4 class="name" th:text = "${campground.getName()}">캠핑장명</h4>
+        <h3 class="price" th:text = "${#numbers.formatInteger(campground.getPrice(), 3, 'COMMA') + '원 ~'}">가격</h3>
     </div>
+
     <div class="tests">
     <h4>편의시설 안내</h4>
     <img class="test" src="/static/img/test.png" alt="편의시설 이미지">
