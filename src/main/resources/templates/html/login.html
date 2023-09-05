@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/css/singup.css">
+    <title th:text="|${pageName}|"></title>
+</head>
+<body>
+<div>
+    <p style="text-align: center; margin-top: 80px"><a th:href="@{/}"> <img src="/static/img/logo_main_150.png" width="150" height="150" alt="로고이미지"></a>
+    </p>
+    <form th:method="post" th:action="|@{/html/login (loginType=${loginType})}|" th:object="${loginRequest}">
+        <div class="input-container-wrapper">
+        <div class="input-container" >
+            <label th:for="loginId"><img src="/static/img/member_img.png" alt="아이디 이미지"> </label>
+            <input type="text"    placeholder="아이디를 입력해주세요" th:field="*{loginId}"/>
+        </div>
+
+        <div class="input-container" >
+            <label th:for="password"><img src="/static/img/pwd_img.png" alt="로고이미지"></label>
+            <input type="password"  placeholder="비밀번호를 입력해주세요" th:field="*{password}"/>
+        </div>
+        <div th:if="${#fields.hasGlobalErrors()}">
+            <br/>
+            <div class="error-class" th:each="error : ${#fields.globalErrors()}" th:text="${error}" />
+        </div>
+        <br/>
+         <p style="text-align: center; margin-top: 20px">
+            <button class="login-btn" onclick="performLogin()">로그인</button>
+        </p>
+            <div class="links-container">
+                <a th:href="@{/html/join (loginType=${loginType})}" >회원 가입</a>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+
+<style>
+    .error-class {
+        color: red;
+    }
+    .error-input {
+        border-color: red;
+    }
+</style>

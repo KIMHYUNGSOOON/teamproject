@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/css/Join.css">
+    <title th:text="|${pageName}|"></title>
+</head>
+<body>
+<div>
+
+    <p style="text-align: center; margin-top: 80px"><a th:href="@{/}"> <img src="/static/img/logo_main_150.png" width="150" height="150" alt="로고이미지"></a>
+    </p>
+    <form th:method="post" th:action="|@{/html/join (loginType=${loginType})}|" th:object="${joinRequest}">
+        <div class="input-container-wrapper">
+            <!-- 아이디 입력창 -->
+        <div class="input-container" >
+            <label th:for="loginId"><img src="/static/img/member_img.png" alt="아이디 이미지"> </label>
+            <input type="text" th:field="*{loginId}"  placeholder="아이디를 입력해주세요" th:errorclass="error-input"/>
+        </div>
+            <div class="error-class" th:errors="*{loginId}"></div>
+            <!-- 이름 입력창 -->
+        <div class="input-container">
+            <label th:for="name"><img src="/static/img/name_img.png" alt="로고이미지"> </label>
+            <input type="text" th:field="*{name}"  placeholder="이름을 입력해주세요" th:errorclass="error-input"/>
+        </div>
+            <div class="error-class" th:errors="*{name}"></div>
+            <!-- 비밀번호 입력창 -->
+            <div class="input-container" >
+            <label th:for="password"><img src="/static/img/pwd_img.png" alt="로고이미지"> </label>
+            <input type="password" th:field="*{password}" placeholder=" 비밀번호를 입력해주세요" th:errorclass="error-input"/>
+            </div>
+            <div class="error-class" th:errors="*{password}"></div>
+
+            <!-- 비밀번호 확인 -->
+            <div class="input-container">
+            <label th:for="passwordCheck"><img src="/static/img/pwd_img.png" alt="로고이미지"></label>
+            <input type="password" th:field="*{passwordCheck}"  placeholder="비밀번확인을 입력해주세요" th:errorclass="error-input" />
+            </div>
+            <div class="error-class" th:errors="*{passwordCheck}"></div>
+            <!-- 이메일 입력창 -->
+            <div class="input-container" >
+            <label th:for="email"><img src="/static/img/email_img.png" alt="로고이미지"></label>
+            <input type="text" th:field="*{email}"  placeholder="이메일을 입력해주세요" th:errorclass="error-input"/>
+
+        </div>
+            <div class="error-class" th:errors="*{email}"></div>
+            <!-- 전화번호 입력창 -->
+        <div class="input-container" >
+            <label th:for="phone"><img src="/static/img/phone_img.png" alt="로고이미지"></label>
+            <input type="text" th:field="*{phone}" placeholder="전화번호를 입력해주세요"  th:errorclass="error-input"/>
+
+        </div>
+            <div class="error-class" th:errors="*{phone}"></div>
+            <!-- 성별 입력창 -->
+            <div class="radio-container"> <img src="/static/img/people_icon.png" alt="로고이미지" style="width: 30px; height: 30px;">
+            <label th:for="gender">남성</label><input type="radio" id="male" th:field="*{gender}" value="man"  th:errorclass="error-input"/>
+                <label th:for="woman">여성</label> <input type="radio" th:field="*{gender}" name="gender" value="female"  th:errorclass="error-input"/>
+
+            </div>
+            <div class="error-class" th:errors="*{gender}"></div>
+            <p style="text-align: center; margin-top: 50px">
+                <button type="submit" class="login-btn">회원가입</button>
+            </p>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
+
+<style>
+    .error-class {
+        color: red;
+
+        text-align: center;
+    }
+
+</style>

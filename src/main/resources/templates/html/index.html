@@ -16,12 +16,18 @@
             <a th:href="@{/}"><img src="/static/img/main_img/logo_main_200.png" alt="로고"></a>
         </h1>
         <nav class="nav">
-            <ul class="clearfix">
-                <li><a th:href="@{/html/Login}">로그인</a></li>
-                <li><a th:href="@{members/new}">회원가입</a></li>
-                <li><a th:href="@{/html/Pwd}">아이디/비밀번호 찾기</a></li>
-                <li><a th:href="@{/html/bookingmain}">예약확인</a></li>
-            </ul>
+            <div>
+                <div th:if="${name == null}">
+                    <h3>로그인 되어있지 않습니다!</h3>
+                    <button th:onclick="|location.href='@{/html/join (loginType=${loginType})}'|">회원 가입</button> <br/><br/>
+                    <button th:onclick="|location.href='@{/html/login (loginType=${loginType})}'|">로그인</button>
+                </div>
+                <div th:unless="${name == null}">
+                    <h3>[[${name}]]님 환영합니다!</h3>
+                    <button th:onclick="|location.href='@{/html/info (loginType=${loginType})}'|">유저 정보</button> <br/><br/>
+                    <button th:onclick="|location.href='@{/html/admin (loginType=${loginType})}'|">관리자 페이지</button> <br/><br/>
+                    <button th:onclick="|location.href='@{/html/logout (loginType=${loginType})}'|">로그아웃</button>
+                </div>
         </nav>
     </header>
 
@@ -41,10 +47,6 @@
             <li th:each="category : ${categoryList}">
                 <a th:href="@{/html/lodging(category=${category.id})}"><img th:src="'/static/img/main_img/category_0'+${category.id}+'.png'" th:alt="${'카테고리0'+category.id}" th:text = "${category.name}"></a>
             </li>
-            <!--<li><a th:href="@{/html/lodging}"><img src="/static/img/main_img/category_02.png" alt="카테고리02">글램핑</a></li>
-            <li><a th:href="@{/html/lodging}"><img src="/static/img/main_img/category_03.png" alt="카테고리03">노지</a></li>
-            <li><a th:href="@{/html/lodging}"><img src="/static/img/main_img/category_04.png" alt="카테고리04">키즈동반</a></li>
-            <li><a th:href="@{/html/lodging}"><img src="/static/img/main_img/category_05.png" alt="카테고리05">애견동반</a></li>-->
         </ul>
     </section>
 
