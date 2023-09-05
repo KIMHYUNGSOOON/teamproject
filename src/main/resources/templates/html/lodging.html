@@ -63,14 +63,17 @@
         <br>
         <div class="search-bar">
             <img class="search-icon" src="/static/img/search_icon.png" alt="돋보기 아이콘">
-            <input class="search-input" type="text" id="campgroundName" name = "campgroundName" placeholder="캠핑장명을 검색해 보세요">
+            <input class="search-input" type="text" id="campgroundName" name = "campgroundName" placeholder="캠핑장명을 검색해 보세요" th:if= "${searchHistory != null}" th:value="${searchHistory.getCampgroundName()}">
+            <input class="search-input" type="text" id="campgroundName" name = "campgroundName" placeholder="캠핑장명을 검색해 보세요" th:unless= "${searchHistory != null}">
         </div>
         <br>
         <div class="location-bar">
             <img class="calendar-icon" src="/static/img/calendar_icon.png" alt="달력 아이콘">
-            <input class="date-input2" type="text" name="member_name" placeholder="날짜">
+            <input class="date-input2" type="text" name="date" placeholder="날짜" th:if= "${searchHistory != null}" th:value="${searchHistory.getDate()}">
+            <input class="date-input2" type="text" name="date" placeholder="날짜" th:unless= "${searchHistory != null}">
             <img class="location-icon" src="/static/img/location_icon.png" alt="지역 아이콘">
-            <input class="location-input" type="text" id="location" name="location_name" placeholder="지역">
+            <input class="location-input" type="text" id="location" name="location_name" placeholder="지역" th:if= "${searchHistory != null}" th:value="${searchHistory.getLocation_name()}">
+            <input class="location-input" type="text" id="location" name="location_name" placeholder="지역" th:unless= "${searchHistory != null}">
             <!-- <input class="location-input" type="text" name="member_name" placeholder="지역"> -->
         </div>
         <div class="subnav">

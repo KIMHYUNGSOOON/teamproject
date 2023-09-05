@@ -37,6 +37,7 @@ public class LodgingController {
         }
 
         model.addAttribute("categoryList", lodgingService.getCategoryList());
+        model.addAttribute("searchHistory", dto);
         return "/html/lodging";
     }
 

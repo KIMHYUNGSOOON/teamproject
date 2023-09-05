@@ -15,7 +15,7 @@ public class CampgroundSearchDTO {
     private String campgroundName;
 
     //유저가 입력한 날짜
-    // private Date date;
+    private String date;
 
     //유저가 입력한 장소
     private String location_name;
