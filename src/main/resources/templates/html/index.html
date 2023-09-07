@@ -67,10 +67,13 @@
                     </ul>
                 </div>
                 <div class="friends">
-                        <h3><button>친구찾기</button></h3>
+                        <h3><a th:href="@{/html/moim}">친구찾기</a></h3>
 <!--                    <h3>친구찾기</h3>-->
                     <ul th:if="${!#lists.isEmpty(moimList)}">
-                        <li th:each="moim : ${moimList}"><a th:href="@{/html/submoim(writeId=${moim.getId()})}" th:text="${moim.getTitle()}"></a></li>
+                        <li th:each="moim : ${moimList}">
+                            <a th:href="@{/html/submoim(moimId=${moim.getId()})}" th:if = "${moim.getContent().length() >30}" th:text="${(moim.getContent()).substring(0,30)}"></a>
+                            <a th:href="@{/html/submoim(moimId=${moim.getId()})}" th:unless = "${moim.getContent().length() >30}" th:text="${moim.getContent()}"></a>
+                        </li>
                         <!--<li><a th:href="@{/html/submoim}">안녕하세요 자주가는 여행은 아니지만이번엔 정말 좋은 장소를 찾아서 넘 기쁜
                             마음에 몇자적어봅니다
                             깨끗하고 맑은공기는 물론이고넘 시원하고  같ㅇㅣ 갈 사람 구함같ㅇㅣ갈 사람 구함같ㅇㅣ 갈 사람 구함같ㅇㅣ 갈 사람 구함같ㅇㅣ •••</a></li>-->

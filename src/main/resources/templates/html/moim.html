@@ -21,19 +21,24 @@
         <a th:href="@{/html/tip}"><button id="k_button" style="width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #FDD835; border-radius: 15px 15px 0 0">꿀팁모음</button></a>
         <button id="d_button" style="width: 80px; height: 30px; font-weight: normal;border: none;cursor: pointer; background-color: #F4FF81; border-radius: 15px 15px 0 0">미정</button>
     </div>
-    <button class="search-button" style="width: 80px; height: 30px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px">작성하기</button>
+    <button type="button" th:if="${session.loginUser != null}" th:onclick="|location.href='@{/html/writemoim}'|" class="search-button" style="width: 80px; height: 30px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px">작성하기</button>
+    <button type="button" th:unless="${session.loginUser != null}" th:onclick="|location.href='@{/html/writemoim}'|" class="search-button" style="width: 80px; height: 30px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px" disabled>작성하기</button>
 
-    <a th:href="@{/html/submoim}"><div class="banners" style="width: 780px; height: 500px; font-size: larger; margin-bottom: 100px; border-radius: 20px">
-    <img class="banner" src="/static/img/banner01.png" alt="배너 이미지01">
-    <h4 class="name">(제목)여기 좋아 보이는데 같이 가실 분 계신가요?</h4>
-    <h6 class="price">(내용 일부분만 나오게.....)가로는 어디까지 나오냐면 대충 애랑 맞춰서<br>
-                       여기까지 나오면 될듯? 한줄로 할지 두줄로 할지는 미정
-    </h6>
-    <img class="level" src="/static/img/moim_img/1st.PNG" alt="1단계 등급">
-    <h5 class="nick">나은삐</h5>
-    </div></a>
 
-    <div class="banners" style="width: 780px; height: 500px; font-size: larger; margin-bottom: 100px; border-radius: 20px">
+        <div th th:if="${!#lists.isEmpty(moimList)}" th:each="moim : ${moimList}" class="banners" style="width: 780px; height: 500px; font-size: larger; margin-bottom: 100px; border-radius: 20px">
+            <a th:href="@{/html/submoim(moimId=${moim.getId()})}">
+                <img th:if="${moim.getMainImg()!=null}" class="banner" th:src="@{/image(image=${moim.getMainImg()})}" alt="메인 이미지">
+                <!--<img class="banner" th:src="'/static/img/writemoim_img/'+${moim.getMainImg()}" alt="메인 이미지">-->
+                <h4 class="name" th:if="${moim.getTitle().length() > 30}" th:text="${moim.getTitle().substring(0,30)}">제목</h4>
+                <h4 class="name" th:unless="${moim.getTitle().length() > 30}" th:text="${moim.getTitle()}">제목</h4>
+                <h6 class="price" th:if="${moim.getContent().length() > 30}" th:text="${moim.getContent().substring(0,30)}">글내용 30글자 제한</h6>
+                <h6 class="price" th:unless="${moim.getContent().length() > 30}" th:text="${moim.getContent()}">글내용 30글자 제한</h6>
+                <h5 class="nick" th:text="${moim.getMember().getNickname()}">닉네임</h5>
+            </a>
+        </div>
+
+
+    <!--<div class="banners" style="width: 780px; height: 500px; font-size: larger; margin-bottom: 100px; border-radius: 20px">
         <img class="banner" src="/static/img/banner02.png" alt="배너 이미지01">
         <h4 class="name">(제목)여기 좋아 보이는데 같이 가실 분 계신가요?</h4>
         <h6 class="price">(내용 일부분만 나오게.....)가로는 어디까지 나오냐면 대충 애랑 맞춰서<br>
@@ -61,7 +66,7 @@
         </h6>
         <img class="level" src="/static/img/moim_img/4th.PNG" alt="4단계 등급">
         <h5 class="nick">김형순</h5>
-    </div>
+    </div>-->
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="script.js"></script>

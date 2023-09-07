@@ -7,4 +7,8 @@ import java.util.List;
 
 public interface WritelistRepository extends JpaRepository<WritelistEntity, Long> {
     List<WritelistEntity> findTop2ByOrderByWritedateDesc();
+
+    List<WritelistEntity> findAllByOrderByWritedateDesc();
+
+    WritelistEntity findAllById(Long id);
 }

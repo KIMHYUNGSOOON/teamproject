@@ -5,28 +5,40 @@
     <meta charset="UTF-8">
     <title>작성하기</title>
     <link rel="icon" type="image/png" href="/static/img/favicon.png">
+    <script src="/static/js/writemoim.js"></script>
 </head>
 <body>
 
 <a th:href="@{/}"><img class="logo" src="/static/img/logo_sub_300_100.png" alt="로고 이미지"></a>
 <div class="bodys">
-    <h2 class="first">작성하기</h2>
-    <div class="ta">
-        <h3>메인 이미지 삽입</h3>
-        <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
-        <h3>서브 이미지 삽입</h3>
-        <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
-        <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
-        <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
-        <img class="photo" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
+    <form method="post" th:action="@{/html/writeInsert}" enctype="multipart/form-data">
+        <h2 class="first">작성하기</h2>
+        <div class="ta">
+            <h3>메인 이미지 삽입</h3>
+            <input type="file" accept="image/gif, image/jpeg, image/png" id="mainImg" name="userImg" style="display: none;">
+            <img id="mainImg" class="photo" onclick="document.querySelector('input#mainImg').click();" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지" >
+            <h3>서브 이미지 삽입</h3>
+            <input type="file" accept="image/gif, image/jpeg, image/png" id="subImg1" name="userImg" style="display: none;">
+            <img id="subImg1" class="photo" onclick="document.querySelector('input#subImg1').click();" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
+            <input type="file" accept="image/gif, image/jpeg, image/png" id="subImg2" name="userImg" style="display: none;">
+            <img id="subImg2" class="photo" onclick="document.querySelector('input#subImg2').click();" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
+            <input type="file" accept="image/gif, image/jpeg, image/png" id="subImg3" name="userImg" style="display: none;">
+            <img id="subImg3" class="photo" onclick="document.querySelector('input#subImg3').click();" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
+            <input type="file" accept="image/gif, image/jpeg, image/png" id="subImg4" name="userImg" style="display: none;">
+            <img id="subImg4" class="photo" onclick="document.querySelector('input#subImg4').click();" src="/static/img/writemoim_img/photo.PNG" alt="포토 이미지">
 
-        <h3>제목</h3>
-        <input class="nick" type="text" placeholder="제목을 작성해주세요.">
-        <h3>내용</h3>
-        <input class="nicks" type="text" name="member_name" placeholder="내용을 작성해주세요.">
-    </div>
-    <button class="search-button" >뒤로가기</button>
-    <button class="search-button" >작성하기</button>
+            <h3>제목</h3>
+            <input class="nick" type="text" name = "title" placeholder="제목을 작성해주세요.">
+            <h3>내용</h3>
+            <input class="nicks" type="text" name="content" id="content" placeholder="내용을 작성해주세요." oninput="checkCharacterCount()">
+            <p id="characterCount">0 / 50 글자</p>
+
+            <input class="nicks" type="text" name="content" placeholder="내용을 작성해주세요.">
+            <input type="hidden" name="userId" th:value="${session.loginUser.getId()}">
+        </div>
+        <button type="button" onclick="history.back(-1)" class="search-button" >뒤로가기</button>
+        <button type="submit" class="search-button" >작성하기</button>
+    </form>
 </div>
 </body>
 </html>
