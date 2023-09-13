@@ -39,3 +39,12 @@ p {
     left: -380px;
     font-weight: bold;
 }
+.buttonss{
+   width: 50px;
+    border-radius: 30px;
+    position: relative;
+    top: 100px;
+    left: -370px;
+    z-index: 50;
+    background-color: #ffffff;
+}

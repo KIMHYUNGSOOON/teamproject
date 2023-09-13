@@ -21,8 +21,12 @@ img{
     height: 40px;
 }
 .nicks{
-    width: 800px;
     height: 400px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 15px;
+    word-wrap: break-word;
 }
 .search-button{
     cursor: pointer;

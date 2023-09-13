@@ -36,7 +36,7 @@ dependencies {
     // https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc11
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation group: 'com.oracle.database.jdbc', name: 'ojdbc11', version: '21.11.0.0'
-
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 
     // https://mvnrepository.com/artifact/com.zaxxer/HikariCP
     implementation group: 'com.zaxxer', name: 'HikariCP', version: '2.7.9'

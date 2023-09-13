@@ -9,4 +9,9 @@ public class NoticeController {
     public String lodging(){
         return "/html/notice";
     }
+
+    @GetMapping("/html/subnotice")
+    public String subnotice(){
+        return "/html/subnotice";
+    }
 }

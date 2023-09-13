@@ -13,9 +13,10 @@
 
 <div class="main" th:if="${moim != null}">
     <h3 class="text" th:text="${moim.getTitle()}">제목</h3>
-<!--    <img class="level" src="/static/img/moim_img/1st.PNG" alt="1단계 등급">-->
+    <!--    <img class="level" src="/static/img/moim_img/1st.PNG" alt="1단계 등급">-->
     <div class="sum">
-        <span th:text="${moim.getMember().getNickname()}">닉네임</span>
+        <span th:if="${moim.getMember().getNickname() != null}" th:text="${moim.getMember().getNickname()}">닉네임</span>
+        <span th:unless="${moim.getMember().getNickname() != null}">간편로그인 사용자</span>
         <span th:text="'이름 : '+${moim.getMember().getName()}"></span>
         <span th:text="'작성일 : '+${moim.getWritedate()}"></span>
         <span th:text="'조회수 ('+${moim.getCounting_view()}+')'"></span>
@@ -71,12 +72,13 @@
         <button th:if="${session.loginUser != null}" class="search-button" style="width: 80px; height: 30px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px">댓글쓰기</button>
         <button th:unless="${session.loginUser != null}" class="search-button" style="width: 80px; height: 30px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px" disabled>댓글쓰기</button>
     </form>
-    <a th:href="@{/html/moim}"><button class="search-button" style="width: 80px; height: 30px; font-weight: bolder; background-color: #8BC34A;border: none; border-radius: 9px">목록보기</button></a>
+    <a th:href="@{/html/moim}"><button class="search-buttons">목록보기</button></a>
     <br>
-    <div th:if="${!#lists.isEmpty(commentsList)}" th:each="comment : ${commentsList}">
-<!--        <img class="level1" src="/static/img/moim_img/1st.PNG" alt="1단계 등급">-->
-        <span th:text="${comment.getMember().getNickname()}">닉네임</span>
-        <span th:text="${comment.getContent()}">댓글 내용</span>
+    <div class="commentfield" th:if="${!#lists.isEmpty(commentsList)}" th:each="comment : ${commentsList}">
+        <!--        <img class="level1" src="/static/img/moim_img/1st.PNG" alt="1단계 등급">-->
+        <span class="nickname" th:if="${comment.getMember().getNickname() != null}" th:text="${comment.getMember().getNickname()}">닉네임</span>
+        <span th:unless="${comment.getMember().getNickname() != null}" th:text="${comment.getMember().getName()}">간편로그인사용자 이름</span>
+        <span class="textfield" th:text="${comment.getContent()}">댓글 내용</span>
     </div>
     <br>
     <!--<div>

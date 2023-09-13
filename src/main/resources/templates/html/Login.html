@@ -30,9 +30,20 @@
             <button class="login-btn" onclick="performLogin()">로그인</button>
         </p>
             <div class="links-container">
-                <a th:href="@{/html/join (loginType=${loginType})}" >회원 가입</a>
+                <a th:href="@{/html/join (loginType=${loginType})}" >회원 가입</a> <br>
+            </div> <br>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="/oauth2/authorization/google" style="display: inline-block; margin-right: 30px;">
+                    <img src="/static/img/google+.png" width="60" height="60">
+                </a>
+                <a href="/oauth2/authorization/kakao" style="display: inline-block; margin-right: 30px;">
+                    <img src="/static/img/KakaoTalk.png.png" width="60" height="60">
+                </a>
+                <a href="/oauth2/authorization/naver" style="display: inline-block;">
+                    <img src="/static/img/navericon.png" width="60" height="60">
+                </a>
             </div>
-        </div>
     </form>
 </div>
 </body>

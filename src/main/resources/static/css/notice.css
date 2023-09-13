@@ -2,31 +2,127 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+}
+span{
+    /*width: 1000px;*/
 }
 .logo{
     position: relative;
     right: 350px;
     margin-bottom: 50px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.logos{
+    width: 200px;
+    height: 50px;
+    position: relative;
+    left: 170px;
+    top: -10px;
+}
+.logos1{
+    width: 200px;
+    height: 50px;
+    margin-left: 200px;
+    margin-right: 50px;
+}
+.logos2{
+    width: 200px;
+    height: 50px;
+    margin-left: 230px;
+    margin-right: 50px;
+}
+.logos3{
+    width: 200px;
+    height: 50px;
+    margin-left: 300px;
+    margin-right: 50px;
+}
+.logos4{
+    width: 200px;
+    height: 50px;
+    margin-left: 270px;
+    margin-right: 50px;
+}
+.logos5{
+    width: 200px;
+    height: 50px;
+    margin-left: 105px;
+    margin-right: 50px;
+}
+.logos6{
+    width: 200px;
+    height: 50px;
+    margin-left: 230px;
+    margin-right: 50px;
 }
 h2 {
     width: 1000px;
     border-bottom: 2px solid #9CCC65;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     color: #9CCC65;
 }
-
-input {
-    border: none;
-    margin-bottom: 20px;
+.areas{
     font-weight: bold;
-    margin-right: 60px;
+    width: 1000px;
+    position: relative;
+    top: -34px;
+    /*border-bottom: 2px solid #9CCC65;*/
+    /*margin-bottom: 0px;*/
 }
 
 .area {
+    position: relative;
     font-weight: bold;
     width: 1000px;
-    border-bottom: 2px solid #9CCC65;
-    margin-bottom: 30px;
+    border-top: 2px solid #9CCC65;
+    /*border-bottom: 2px solid #9CCC65;*/
+    /*margin-bottom: 10px;*/
     cursor: pointer;
+
+}
+h4 {
+    float: left;
+    /*margin-right: 110px;*/
+    position: relative;
+    top: 10px;
+    color: #333333;
+}
+.number{
+    margin-right: 100px;
+}
+.text{
+    margin-right: 0px;
+}
+.date{
+    position: relative;
+    left: 120px;
+}
+.person{
+    margin-left: 540px;
+    margin-right: 50px;
+}
+.buttons{
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-right: 50px;
+}
+.buttons1{
+    margin-right: 5px;
+}
+.buttons2{
+    margin-right: 5px;
+}
+.buttons3{
+    margin-right: 5px;
+}
+.buttons4{
+    margin-right: 5px;
+}
+.write{
+    margin-top: 30px;
+}
+.text4{
+    position: relative;
+    left: 350px;
 }
